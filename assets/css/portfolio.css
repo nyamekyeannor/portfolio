@@ -435,6 +435,9 @@ section {
   height: 48px;
   width: 48px;
 }
+.figma {
+  width: 20%;
+}
 
 /*--------------------------------------------------------------
 # Projects
@@ -668,10 +671,7 @@ section {
   font-size: 14px;
   color: #728394;
 }
-/* .contact .info .email,
-.contact .info .phone {
-  margin-top: 40px;
-} */
+
 .info-contact {
   margin-left: 100px;
   margin-bottom: 40px;
