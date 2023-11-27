@@ -122,7 +122,7 @@ h6 {
   padding: 15px;
   overflow-y: auto;
 }
-@media (max-width: 992px) {
+@media (max-width: 1199px) {
   #header {
     width: 300px;
     background: #fff;
@@ -131,7 +131,7 @@ h6 {
   }
 }
 
-@media (min-width: 992px) {
+@media (min-width: 1199px) {
   #main {
     margin-left: 100px;
   }
@@ -180,17 +180,14 @@ h6 {
   padding: 0 5px 0 7px;
   color: #45505b;
 }
-@media (min-width: 992px) {
-  .nav-menu a,
-  .nav-menu a:focus {
-    width: 56px;
-  }
+/* @media (min-width: 1200px) {
   .nav-menu a span,
   .nav-menu a:focus span {
     display: none;
     color: #fff;
   }
-}
+} */
+
 .nav-menu a:hover,
 .nav-menu .active,
 .nav-menu .active:focus,
@@ -257,7 +254,7 @@ h6 {
   background-size: cover;
   position: relative;
 }
-@media (min-width: 992px) {
+@media (min-width: 1199px) {
   #hero {
     padding-left: 160px;
   }
@@ -303,7 +300,7 @@ h6 {
 #hero .social-links a:hover {
   color: #0563bb;
 }
-@media (max-width: 992px) {
+@media (max-width: 1199px) {
   #hero {
     text-align: center;
   }
