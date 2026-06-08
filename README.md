@@ -1,4 +1,4 @@
-# Agentic Portfolio Template
+# My Portfolio Template
 
 A clean static portfolio template that people and coding agents can clone, edit, and publish.
 
