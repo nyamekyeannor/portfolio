@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Agentic Portfolio Template</title>
+  <meta name="description" content="A clean static portfolio template for projects, writing, talks, and custom sections.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Agentic Portfolio Template">
+  <meta property="og:description" content="A clean static portfolio template for projects, writing, talks, and custom sections.">
+  <meta property="og:image" content="assets/img/preview-placeholder.svg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="assets/img/avatar-placeholder.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="index.html" data-home-link>
+        <span class="brand-mark">E</span>
+        <span data-bind="site.name">Example Builder</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation" data-render="nav"></nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <div class="hero-layout">
+        <div>
+          <p class="eyebrow" data-bind="site.kicker">Demos, writing, and talks</p>
+          <h1 data-bind="site.headline">I turn rough technical work into useful public artifacts.</h1>
+          <p class="lede" data-bind="site.summary">Use this portfolio as a starting point.</p>
+          <div class="button-row">
+            <a class="button primary" data-bind-href="site.primaryCta.href" data-bind="site.primaryCta.label" href="blog/">Read the latest</a>
+            <a class="button" data-bind-href="site.secondaryCta.href" data-bind="site.secondaryCta.label" href="projects/">View projects</a>
+          </div>
+        </div>
+
+        <div class="profile-strip">
+          <img class="avatar" data-bind-src="site.avatar" src="assets/img/avatar-placeholder.svg" alt="Example profile avatar">
+          <div>
+            <p class="eyebrow" data-bind="site.role">Developer Advocate</p>
+            <div class="proof-grid" data-render="proof-points"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="featured-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="featured-heading">Featured</h2>
+          <p class="section-kicker">Cards for the work you want visitors to notice first.</p>
+        </div>
+      </div>
+      <div class="grid" data-render="landing-cards"></div>
+    </section>
+
+    <section class="section" aria-labelledby="writing-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="writing-heading">Latest Writing</h2>
+          <p class="section-kicker">Short notes, essays, build logs, or tutorials.</p>
+        </div>
+        <a class="button" href="blog/">All posts</a>
+      </div>
+      <div class="grid" data-render="blog-posts" data-limit="3"></div>
+    </section>
+
+    <section class="section" aria-labelledby="projects-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="projects-heading">Projects</h2>
+          <p class="section-kicker">Replace these with repos, demos, products, or case studies.</p>
+        </div>
+        <a class="button" href="projects/">All projects</a>
+      </div>
+      <div class="grid" data-render="projects" data-limit="3"></div>
+    </section>
+
+    <section class="section" aria-labelledby="talks-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="talks-heading">Talks</h2>
+          <p class="section-kicker">Use this for accepted talks, workshops, and pitch ideas.</p>
+        </div>
+        <a class="button" href="talks/">All talks</a>
+      </div>
+      <div class="grid two" data-render="talks" data-limit="2"></div>
+    </section>
+
+    <section class="section" aria-labelledby="custom-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="custom-heading">Custom Sections</h2>
+          <p class="section-kicker">Add whatever your portfolio needs next.</p>
+        </div>
+        <a class="button" href="sections/">All sections</a>
+      </div>
+      <div class="grid two" data-render="sections"></div>
+    </section>
+
+    <section class="split-band" aria-label="Template preview">
+      <img src="assets/img/preview-placeholder.svg" alt="Preview placeholder graphic">
+      <div class="split-copy">
+        <p class="eyebrow">Template Shape</p>
+        <h2>Built for plain edits.</h2>
+        <p class="lede">This site keeps content in one data file and pages in predictable folders, so people and coding agents can update it without hunting through a framework.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p data-bind="site.footerNote">Built from a static portfolio template.</p>
+      <div class="social-links" data-render="social"></div>
+    </div>
+  </footer>
+
+  <script src="content/site-data.js"></script>
+  <script src="assets/js/render.js"></script>
+</body>
+</html>

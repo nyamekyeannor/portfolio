@@ -1,0 +1,23 @@
+{
+  "name": "agentic-portfolio-template",
+  "version": "1.0.0",
+  "description": "A clean static portfolio template built for people and coding agents to customize.",
+  "private": false,
+  "type": "commonjs",
+  "scripts": {
+    "dev": "node scripts/dev-server.js",
+    "test": "node scripts/test-site.js",
+    "new:blog": "node scripts/new-blog.js",
+    "new:card": "node scripts/new-card.js",
+    "new:talk": "node scripts/new-talk.js",
+    "new:section": "node scripts/new-section.js"
+  },
+  "keywords": [
+    "portfolio",
+    "template",
+    "developer-relations",
+    "static-site",
+    "personal-site"
+  ],
+  "license": "MIT"
+}

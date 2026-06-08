@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Projects | Agentic Portfolio Template</title>
+  <meta name="description" content="Example projects index for the portfolio template.">
+  <link rel="icon" href="../assets/img/avatar-placeholder.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../assets/css/styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="../index.html" data-home-link>
+        <span class="brand-mark">E</span>
+        <span data-bind="site.name">Example Builder</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation" data-render="nav"></nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+    </div>
+  </header>
+
+  <main class="page">
+    <section class="hero">
+      <p class="eyebrow">Builds</p>
+      <h1>Projects</h1>
+      <p class="lede">Use this page for repos, products, demos, case studies, and tools.</p>
+    </section>
+
+    <section class="section" aria-labelledby="projects-heading">
+      <div class="section-header">
+        <div>
+          <h2 id="projects-heading">All Projects</h2>
+          <p class="section-kicker">Edit `projects` in `content/site-data.js`.</p>
+        </div>
+      </div>
+      <div class="grid" data-render="projects"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p data-bind="site.footerNote">Built from a static portfolio template.</p>
+      <div class="social-links" data-render="social"></div>
+    </div>
+  </footer>
+
+  <script>window.PORTFOLIO_BASE = "../";</script>
+  <script src="../content/site-data.js"></script>
+  <script src="../assets/js/render.js"></script>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{title}} | Agentic Portfolio Template</title>
+  <meta name="description" content="{{summary}}">
+  <link rel="icon" href="../../assets/img/avatar-placeholder.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+</head>
+<body data-blog-slug="{{slug}}">
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="brand" href="../../index.html" data-home-link>
+        <span class="brand-mark">E</span>
+        <span data-bind="site.name">Example Builder</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation" data-render="nav"></nav>
+      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+    </div>
+  </header>
+
+  <main class="page post-shell">
+    <a class="button" href="../">Back to blog</a>
+    <article>
+      <header class="hero">
+        <p class="eyebrow">Post</p>
+        <h1 data-post-title>{{title}}</h1>
+        <p class="lede" data-post-summary>{{summary}}</p>
+        <div class="post-meta">
+          <span data-post-date>{{date}}</span>
+          <span data-post-tags></span>
+        </div>
+      </header>
+
+      <div class="post-body">
+        <p>Replace this paragraph with the post opening.</p>
+
+        <h2>What Happened</h2>
+        <p>Explain the concrete situation, build, question, or failure that made this worth writing.</p>
+
+        <h2>What Changed</h2>
+        <p>Explain the decision, fix, model, or workflow that changed your mind.</p>
+
+        <h2>What To Do Next</h2>
+        <p>Give the reader a practical next step.</p>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p data-bind="site.footerNote">Built from a static portfolio template.</p>
+      <div class="social-links" data-render="social"></div>
+    </div>
+  </footer>
+
+  <script>window.PORTFOLIO_BASE = "../../";</script>
+  <script src="../../content/site-data.js"></script>
+  <script src="../../assets/js/render.js"></script>
+</body>
+</html>

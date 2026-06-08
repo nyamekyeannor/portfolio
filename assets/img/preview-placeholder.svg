@@ -1,0 +1,12 @@
+<svg width="1200" height="630" viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Portfolio preview placeholder</title>
+  <desc id="desc">A simple preview image placeholder for projects and posts.</desc>
+  <rect width="1200" height="630" fill="#f6f7fb"/>
+  <rect x="110" y="90" width="980" height="450" rx="28" fill="#ffffff" stroke="#d9dee8" stroke-width="3"/>
+  <rect x="160" y="150" width="310" height="26" rx="13" fill="#14b8a6"/>
+  <rect x="160" y="210" width="700" height="20" rx="10" fill="#c6ccd8"/>
+  <rect x="160" y="250" width="560" height="20" rx="10" fill="#d9dee8"/>
+  <rect x="160" y="330" width="240" height="110" rx="10" fill="#f97316"/>
+  <rect x="430" y="330" width="240" height="110" rx="10" fill="#6366f1"/>
+  <rect x="700" y="330" width="240" height="110" rx="10" fill="#f43f5e"/>
+</svg>

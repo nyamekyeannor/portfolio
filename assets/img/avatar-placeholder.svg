@@ -1,0 +1,11 @@
+<svg width="320" height="320" viewBox="0 0 320 320" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="title desc">
+  <title id="title">Example avatar placeholder</title>
+  <desc id="desc">A simple geometric avatar placeholder for the portfolio template.</desc>
+  <rect width="320" height="320" rx="32" fill="#f6f7fb"/>
+  <rect x="30" y="30" width="260" height="260" rx="28" fill="#ffffff" stroke="#d9dee8" stroke-width="2"/>
+  <circle cx="160" cy="128" r="52" fill="#14b8a6"/>
+  <path d="M76 272c10-55 42-86 84-86s74 31 84 86" fill="#394150"/>
+  <circle cx="138" cy="122" r="8" fill="#ffffff"/>
+  <circle cx="182" cy="122" r="8" fill="#ffffff"/>
+  <path d="M138 154c13 12 31 12 44 0" fill="none" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
+</svg>

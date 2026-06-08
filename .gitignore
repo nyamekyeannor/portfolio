@@ -1,0 +1,11 @@
+.DS_Store
+node_modules/
+.env
+.env.*
+!.env.example
+dist/
+build/
+.vercel/
+.netlify/
+coverage/
+npm-debug.log*
