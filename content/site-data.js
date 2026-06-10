@@ -87,54 +87,38 @@ window.PORTFOLIO_DATA = {
       tags: ["Search API", "Vanilla JS"]
     },
     {
-      title: "Harmonii",
-      description: "Independent app connecting people through shared music taste, built from scratch with custom UI and music API integration.",
+      title: "Leveo Content Series",
+      description: "AI-powered Chrome extension for job seekers. Producing a 12-video content series as the brand's official content creator.",
       href: "projects/",
-      tags: ["JavaScript", "Music API"]
+      tags: ["Content Strategy", "Video Production", "Brand Partnership"]
     }
   ],
 
   talks: [
     {
       title: "Decoded Stories Podcast",
-      event: "Host & Creator",
-      description: "Conversations at the intersection of tech, creativity, and culture featuring developers, creators, and people building interesting things. Available on Spotify and YouTube.",
+      event: "Content & Media",
+      description: "Coming soon.",
       href: "talks/",
-      tags: ["podcast", "creator"]
+      tags: ["podcast"]
     },
     {
-      title: "AnnorCode",
-      event: "Lifestyle Content",
-      description: "Lifestyle content about life as a developer and creator — desk setup, brand partnerships, and the behind-the-scenes of building in public across YouTube, Instagram, and TikTok.",
+      title: "AnnorCode YouTube",
+      event: "Content & Media",
+      description: "Coming soon.",
       href: "talks/",
-      tags: ["content", "creator"]
+      tags: ["youtube"]
     }
   ],
 
   blogPosts: [
     {
-      title: "Getting Started With Agent Notes",
-      slug: "getting-started-with-agent-notes",
-      date: "2026-01-12",
-      summary: "A fake example post that shows the default blog layout and content model.",
-      href: "blog/getting-started-with-agent-notes/",
-      tags: ["template", "notes"]
-    },
-    {
-      title: "What Belongs On A Project Card",
-      slug: "project-card-example",
-      date: "2026-02-03",
-      summary: "A placeholder entry showing how short writing can link to a future post.",
+      title: "Coming Soon — First post dropping soon",
+      slug: "coming-soon",
+      date: "2026-06-10",
+      summary: "First post dropping soon.",
       href: "blog/",
-      tags: ["projects", "portfolio"]
-    },
-    {
-      title: "A Better Talk Backlog",
-      slug: "talk-backlog-example",
-      date: "2026-03-21",
-      summary: "A placeholder entry for turning talk ideas into public artifacts.",
-      href: "blog/",
-      tags: ["talks", "process"]
+      tags: []
     }
   ],
 
