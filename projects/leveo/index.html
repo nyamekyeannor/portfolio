@@ -37,11 +37,42 @@
       border-color: var(--accent-blue);
     }
 
+    .series-thumb-wrap {
+      position: relative;
+      overflow: hidden;
+    }
+
     .series-thumb {
       width: 100%;
       aspect-ratio: 16 / 9;
       object-fit: cover;
       display: block;
+    }
+
+    .play-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .play-btn {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.72);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0d0f14;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .series-card:hover .play-btn {
+      background: rgba(255, 255, 255, 1);
+      transform: scale(1.1);
     }
 
     .series-body {
@@ -127,7 +158,14 @@
       <div class="series-grid">
 
         <a class="series-card" href="https://youtube.com/shorts/XOd1JzdupvE" target="_blank" rel="noopener noreferrer">
-          <img class="series-thumb" src="../../assets/img/leveo-thumb-1.jpg" alt="Meet Leveo — The Chrome Extension Changing How You Job Search">
+          <div class="series-thumb-wrap">
+            <img class="series-thumb" src="../../assets/img/leveo-thumb-1.jpg" alt="Meet Leveo — The Chrome Extension Changing How You Job Search">
+            <div class="play-overlay" aria-hidden="true">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><polygon points="8,5 20,12 8,19"/></svg>
+              </div>
+            </div>
+          </div>
           <div class="series-body">
             <span class="series-number">01</span>
             <h3 class="series-title">Meet Leveo — The Chrome Extension Changing How You Job Search</h3>
@@ -136,7 +174,14 @@
         </a>
 
         <a class="series-card" href="https://youtube.com/shorts/rPcVo7G2Q0o" target="_blank" rel="noopener noreferrer">
-          <img class="series-thumb" src="../../assets/img/leveo-thumb-2.jpg" alt="Stop Clicking Easy Apply — Use Leveo's Resume Fit Score Instead">
+          <div class="series-thumb-wrap">
+            <img class="series-thumb" src="../../assets/img/leveo-thumb-2.jpg" alt="Stop Clicking Easy Apply — Use Leveo's Resume Fit Score Instead">
+            <div class="play-overlay" aria-hidden="true">
+              <div class="play-btn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="22" height="22" aria-hidden="true"><polygon points="8,5 20,12 8,19"/></svg>
+              </div>
+            </div>
+          </div>
           <div class="series-body">
             <span class="series-number">02</span>
             <h3 class="series-title">Stop Clicking Easy Apply — Use Leveo's Resume Fit Score Instead</h3>
