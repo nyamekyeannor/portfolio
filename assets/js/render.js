@@ -14,6 +14,8 @@
 
   const SUN_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>`;
   const MOON_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg>`;
+  const HAMBURGER_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>`;
+  const CLOSE_ICON = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="18" height="18" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>`;
 
   function escapeHtml(value) {
     return String(value ?? "")
@@ -177,25 +179,56 @@
     });
   }
 
-  function updateToggleIcon(toggle, theme) {
-    if (!toggle) return;
-    toggle.innerHTML = theme === "light" ? SUN_ICON : MOON_ICON;
-    toggle.setAttribute("aria-label", theme === "light" ? "Switch to dark mode" : "Switch to light mode");
+  function updateAllToggleIcons(theme) {
+    const label = theme === "light" ? "Switch to dark mode" : "Switch to light mode";
+    const icon = theme === "light" ? SUN_ICON : MOON_ICON;
+    document.querySelectorAll("[data-theme-toggle]").forEach((toggle) => {
+      toggle.innerHTML = icon;
+      toggle.setAttribute("aria-label", label);
+    });
   }
 
   function setupTheme() {
-    const toggle = document.querySelector("[data-theme-toggle]");
     const stored = localStorage.getItem("portfolio-theme");
     const theme = stored === "light" ? "light" : "dark";
     document.documentElement.dataset.theme = theme;
-    updateToggleIcon(toggle, theme);
+    updateAllToggleIcons(theme);
 
-    if (!toggle) return;
-    toggle.addEventListener("click", () => {
-      const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
-      document.documentElement.dataset.theme = next;
-      localStorage.setItem("portfolio-theme", next);
-      updateToggleIcon(toggle, next);
+    document.querySelectorAll("[data-theme-toggle]").forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const next = document.documentElement.dataset.theme === "light" ? "dark" : "light";
+        document.documentElement.dataset.theme = next;
+        localStorage.setItem("portfolio-theme", next);
+        updateAllToggleIcons(next);
+      });
+    });
+  }
+
+  function setupHamburger() {
+    const hamburger = document.querySelector("[data-hamburger]");
+    const menu = document.getElementById("mobile-menu");
+    if (!hamburger || !menu) return;
+
+    hamburger.innerHTML = HAMBURGER_ICON;
+
+    function toggleMenu(open) {
+      menu.classList.toggle("is-open", open);
+      menu.setAttribute("aria-hidden", open ? "false" : "true");
+      hamburger.setAttribute("aria-expanded", String(open));
+      hamburger.innerHTML = open ? CLOSE_ICON : HAMBURGER_ICON;
+      hamburger.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+    }
+
+    hamburger.addEventListener("click", () => {
+      toggleMenu(!menu.classList.contains("is-open"));
+    });
+
+    menu.querySelectorAll("a").forEach((link) => {
+      link.addEventListener("click", () => toggleMenu(false));
+    });
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && menu.classList.contains("is-open")) toggleMenu(false);
     });
   }
 
@@ -210,4 +243,5 @@
   renderCollection("blog-posts", data.blogPosts, "Post");
   renderBlogHeader();
   setupTheme();
+  setupHamburger();
 })();

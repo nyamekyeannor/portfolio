@@ -457,6 +457,77 @@ a.item-card:hover {
   margin: 0;
 }
 
+/* ── Hamburger button ── */
+
+.hamburger {
+  display: none;
+  width: 36px;
+  height: 36px;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: transparent;
+  color: var(--text);
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  flex-shrink: 0;
+  transition: color 120ms, background 120ms;
+}
+
+.hamburger:hover {
+  background: var(--surface-soft);
+}
+
+/* ── Mobile dropdown menu ── */
+
+.mobile-menu {
+  display: none;
+}
+
+.mobile-menu-inner {
+  width: calc(100% - 32px);
+  margin: 0 auto;
+  padding: 14px 0 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mobile-nav-links {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mobile-nav-links a {
+  display: flex;
+  align-items: center;
+  padding: 10px 12px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text);
+  text-decoration: none;
+  border-radius: var(--radius);
+  white-space: nowrap;
+}
+
+.mobile-nav-links a:visited {
+  color: var(--text);
+}
+
+.mobile-nav-links a:hover {
+  background: var(--surface-soft);
+}
+
+.mobile-menu-bottom {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
 /* ── List stack (used by sub-pages) ── */
 
 .list-stack {
@@ -482,14 +553,28 @@ a.item-card:hover {
 }
 
 @media (max-width: 600px) {
-  /* Hide nav social icons — they appear in the hero */
+  /* Hide nav links and social icons — accessible via hamburger */
+  .nav-links,
   .nav-social {
     display: none;
   }
 
-  .nav-links a {
-    padding: 0 8px;
-    font-size: 0.85rem;
+  /* Show hamburger */
+  .hamburger {
+    display: inline-flex;
+  }
+
+  /* Enable mobile dropdown */
+  .mobile-menu {
+    display: block;
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mobile-menu.is-open {
+    max-height: 400px;
+    border-top: 1px solid var(--border);
   }
 
   .hero {
