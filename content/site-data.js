@@ -90,7 +90,7 @@ window.PORTFOLIO_DATA = {
       title: "Leveo Content Series",
       description: "Developer Advocate (Contract) — Producing a 12-video content series across YouTube, Instagram, LinkedIn, and TikTok for an AI-powered Chrome extension built for job seekers.",
       href: "projects/leveo/",
-      tags: ["Content Strategy", "Video Production", "Brand Partnership"]
+      tags: ["Developer Advocacy", "Content Strategy", "Video Production"]
     }
   ],
 
@@ -123,16 +123,6 @@ window.PORTFOLIO_DATA = {
   ],
 
   sections: [
-    {
-      title: "Brand Partnerships",
-      items: [
-        "Leveo — AI-powered Chrome extension — video series + lifestyle content (Active)",
-        "Typesense — Open-source search engine — demo apps + educational content",
-        "Hyperskill — Developer learning platform — sponsored content",
-        "CodeCrafters — Advanced coding challenges — sponsored content",
-        "Pro North Saddle Stool — Ergonomic furniture — lifestyle + desk setup content"
-      ]
-    },
     {
       title: "Now",
       items: [
