@@ -10,112 +10,77 @@
   <meta property="og:description" content="I build apps and integrations on top of developer tools and AI products — then turn what I learn into content that helps real users actually understand and ship with them.">
   <meta property="og:image" content="assets/img/preview-placeholder.svg">
   <meta name="twitter:card" content="summary_large_image">
-  <link rel="icon" href="assets/img/avatar-placeholder.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/avatar.jpg" type="image/jpeg">
   <link rel="stylesheet" href="assets/css/styles.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem("portfolio-theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    })();
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="nav-shell">
-      <a class="brand" href="index.html" data-home-link>
-        <span class="brand-mark">E</span>
-        <span data-bind="site.name">Nyamekye Annor</span>
+      <a class="nav-avatar-link" href="index.html" data-home-link aria-label="Home">
+        <img class="nav-avatar" src="assets/img/avatar.jpg" alt="Nyamekye Annor">
       </a>
-      <nav class="nav-links" aria-label="Main navigation" data-render="nav"></nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Main navigation" data-render="nav"></nav>
+        <div class="nav-social social-links" data-render="social"></div>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
+      </div>
     </div>
   </header>
 
   <main class="page">
     <section class="hero">
-      <div class="hero-layout">
-        <div>
-          <p class="eyebrow" data-bind="site.kicker">DevRel Engineer · AI Builder · Technical Writer · Storyteller</p>
-          <h1 data-bind="site.headline">I build. Then I explain it.</h1>
-          <p class="lede" data-bind="site.summary">I build apps and integrations on top of developer tools and AI products — then turn what I learn into content that helps real users actually understand and ship with them.</p>
-          <div class="button-row">
-            <a class="button primary" data-bind-href="site.primaryCta.href" data-bind="site.primaryCta.label" href="blog/">Explore my work</a>
-            <a class="button" data-bind-href="site.secondaryCta.href" data-bind="site.secondaryCta.label" href="projects/">View projects</a>
-          </div>
-        </div>
-
-        <div class="profile-strip">
-          <img class="avatar" data-bind-src="site.avatar" src="assets/img/avatar-placeholder.svg" alt="Example profile avatar">
-          <div>
-            <p class="eyebrow" data-bind="site.role">Developer Advocate</p>
-            <div class="proof-grid" data-render="proof-points"></div>
-          </div>
-        </div>
+      <p class="location">Washington, DC</p>
+      <h1 class="hero-headline">Hi, I'm <span class="accent-blue">Nyamekye.</span></h1>
+      <p class="hero-tagline">DevRel Engineer, AI Builder, and Technical Storyteller.</p>
+      <p class="lede" data-bind="site.summary">I build apps and integrations on top of developer tools and AI products — then turn what I learn into content that helps real users actually understand and ship with them.</p>
+      <div class="button-row">
+        <a class="button primary" href="projects/">Explore My Work</a>
       </div>
-    </section>
-
-    <section class="section" aria-labelledby="featured-heading">
-      <div class="section-header">
-        <div>
-          <h2 id="featured-heading">Featured</h2>
-          <p class="section-kicker">Cards for the work you want visitors to notice first.</p>
-        </div>
-      </div>
-      <div class="grid" data-render="landing-cards"></div>
-    </section>
-
-    <section class="section" aria-labelledby="writing-heading">
-      <div class="section-header">
-        <div>
-          <h2 id="writing-heading">Latest Writing</h2>
-          <p class="section-kicker">Short notes, essays, build logs, or tutorials.</p>
-        </div>
-        <a class="button" href="blog/">All posts</a>
-      </div>
-      <div class="grid" data-render="blog-posts" data-limit="3"></div>
+      <div class="hero-social social-links" data-render="social"></div>
     </section>
 
     <section class="section" aria-labelledby="projects-heading">
       <div class="section-header">
         <div>
-          <h2 id="projects-heading">Projects</h2>
-          <p class="section-kicker">Replace these with repos, demos, products, or case studies.</p>
+          <h2 id="projects-heading">Projects &amp; Demo Apps</h2>
+          <p class="section-kicker">Demos, integrations, and tools I've shipped to learn by building.</p>
         </div>
-        <a class="button" href="projects/">All projects</a>
+        <a class="view-all" href="projects/">View all &rarr;</a>
       </div>
       <div class="grid" data-render="projects" data-limit="3"></div>
     </section>
 
-    <section class="section" aria-labelledby="talks-heading">
+    <section class="section" aria-labelledby="content-heading">
       <div class="section-header">
         <div>
-          <h2 id="talks-heading">Talks</h2>
-          <p class="section-kicker">Use this for accepted talks, workshops, and pitch ideas.</p>
+          <h2 id="content-heading">Content</h2>
+          <p class="section-kicker">Podcast episodes, videos, and posts where I break down dev tools and AI.</p>
         </div>
-        <a class="button" href="talks/">All talks</a>
+        <a class="view-all" href="blog/">View all &rarr;</a>
       </div>
       <div class="grid two" data-render="talks" data-limit="2"></div>
     </section>
 
-    <section class="section" aria-labelledby="custom-heading">
+    <section class="section" aria-labelledby="partnerships-heading">
       <div class="section-header">
         <div>
-          <h2 id="custom-heading">Custom Sections</h2>
-          <p class="section-kicker">Add whatever your portfolio needs next.</p>
+          <h2 id="partnerships-heading">Brand Partnerships</h2>
+          <p class="section-kicker">Brands I've worked with on sponsored content, demos, and integrations.</p>
         </div>
-        <a class="button" href="sections/">All sections</a>
       </div>
-      <div class="grid two" data-render="sections"></div>
-    </section>
-
-    <section class="split-band" aria-label="Template preview">
-      <img src="assets/img/preview-placeholder.svg" alt="Preview placeholder graphic">
-      <div class="split-copy">
-        <p class="eyebrow">Template Shape</p>
-        <h2>Built for plain edits.</h2>
-        <p class="lede">This site keeps content in one data file and pages in predictable folders, so people and coding agents can update it without hunting through a framework.</p>
-      </div>
+      <div class="grid two" data-render="sections" data-limit="1"></div>
     </section>
   </main>
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p data-bind="site.footerNote">© 2026 Nyamekye Annor · Developer Advocate</p>
-      <div class="social-links" data-render="social"></div>
+      <p data-bind="site.footerNote">© 2026 Nyamekye Annor · Developer Advocate · matcha > coffee</p>
     </div>
   </footer>
 

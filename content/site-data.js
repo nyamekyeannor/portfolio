@@ -6,7 +6,7 @@ window.PORTFOLIO_DATA = {
     headline: "I build. Then I explain it.",
     summary:
       "I build apps and integrations on top of developer tools and AI products — then turn what I learn into content that helps real users actually understand and ship with them.",
-    avatar: "assets/img/avatar-placeholder.svg",
+    avatar: "assets/img/avatar.jpg",
     primaryCta: {
       label: "Explore my work",
       href: "blog/"
@@ -15,23 +15,20 @@ window.PORTFOLIO_DATA = {
       label: "View projects",
       href: "projects/"
     },
-    footerNote: "© 2026 Nyamekye Annor · Developer Advocate"
+    footerNote: "© 2026 Nyamekye Annor · Developer Advocate · matcha > coffee"
   },
 
   nav: [
-    { label: "Home", href: "index.html" },
     { label: "Blog", href: "blog/" },
-    { label: "Projects", href: "projects/" },
-    { label: "Talks", href: "talks/" },
-    { label: "Sections", href: "sections/" }
+    { label: "Explore My Work", href: "projects/" }
   ],
 
   social: [
-    { label: "YouTube", href: "https://youtube.com/@annorcode" },
-    { label: "Instagram", href: "https://instagram.com/annorcode" },
+    { label: "X", href: "https://x.com/annorcode" },
+    { label: "GitHub", href: "https://github.com/annorcode" },
     { label: "LinkedIn", href: "https://linkedin.com/in/nyamekye-annor" },
-    { label: "TikTok", href: "https://tiktok.com/@annorcode" },
-    { label: "Email", href: "mailto:annorcode@gmail.com" }
+    { label: "YouTube", href: "https://youtube.com/@annorcode" },
+    { label: "Instagram", href: "https://instagram.com/annorcode" }
   ],
 
   proofPoints: [
