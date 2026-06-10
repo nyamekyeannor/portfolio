@@ -88,8 +88,8 @@ window.PORTFOLIO_DATA = {
     },
     {
       title: "Leveo Content Series",
-      description: "AI-powered Chrome extension for job seekers. Producing a 12-video content series as the brand's official content creator.",
-      href: "projects/",
+      description: "Developer Advocate (Contract) — Producing a 12-video content series across YouTube, Instagram, LinkedIn, and TikTok for an AI-powered Chrome extension built for job seekers.",
+      href: "projects/leveo/",
       tags: ["Content Strategy", "Video Production", "Brand Partnership"]
     }
   ],
