@@ -403,6 +403,34 @@ a.item-card:hover {
   line-height: 1.8;
 }
 
+/* ── Back link ── */
+
+.back-link {
+  display: inline-block;
+  color: var(--muted);
+  text-decoration: none;
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+
+.back-link:hover {
+  color: var(--text);
+}
+
+/* ── Visually hidden (screen-reader only) ── */
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
 /* ── Post pages ── */
 
 .post-shell {

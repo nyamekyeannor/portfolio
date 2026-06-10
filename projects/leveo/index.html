@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Leveo — Brand Partnership | Nyamekye Annor</title>
-  <meta name="description" content="Developer Advocate (Contract) for Leveo — producing a 12-video content series for an AI-powered Chrome extension built for job seekers.">
+  <title>The Leveo Series | Nyamekye Annor</title>
+  <meta name="description" content="Showing real job seekers how AI tools can transform their search — produced as Developer Advocate for Leveo. 12-video series in production.">
   <link rel="icon" href="../../assets/img/avatar.jpg" type="image/jpeg">
   <link rel="stylesheet" href="../../assets/css/styles.css">
   <script>
@@ -14,18 +14,79 @@
     })();
   </script>
   <style>
-    .video-embed {
+    .series-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+    }
+
+    .series-card {
+      display: flex;
+      flex-direction: column;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      background: var(--surface);
+      overflow: hidden;
+      text-decoration: none;
+      color: inherit;
+      transition: transform 160ms ease, border-color 160ms;
+    }
+
+    .series-card:hover {
+      transform: translateY(-3px);
+      border-color: var(--accent-blue);
+    }
+
+    .series-thumb {
       width: 100%;
-      aspect-ratio: 9 / 16;
-      border-radius: var(--radius, 8px);
-      border: 0;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
       display: block;
     }
 
-    .post-body ul {
-      padding-left: 20px;
+    .series-body {
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      flex: 1;
+    }
+
+    .series-number {
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-blue);
+    }
+
+    .series-title {
+      font-size: 1.05rem;
+      font-weight: 700;
+      line-height: 1.35;
+      margin: 0;
+    }
+
+    .series-desc {
+      font-size: 0.9rem;
       color: var(--muted);
-      line-height: 1.9;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    .page-eyebrow {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-blue);
+      margin: 0 0 14px;
+    }
+
+    @media (max-width: 640px) {
+      .series-grid {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -55,69 +116,34 @@
 
   <main class="page">
     <section class="hero">
-      <h1>Leveo — Brand Partnership</h1>
-      <p class="lede">Developer Advocate (Contract) · 12-Video Series · Active 2025–2026</p>
+      <a class="back-link" href="../../projects/">← Back to Projects</a>
+      <p class="page-eyebrow">Brand Partnership · Developer Advocate (Contract)</p>
+      <h1>The Leveo Series</h1>
+      <p class="lede">Showing real job seekers how AI tools can transform their search — produced as Developer Advocate for Leveo. 12-video series in production across YouTube, Instagram, LinkedIn, and TikTok.</p>
     </section>
 
-    <section class="section" aria-labelledby="about-heading">
-      <div class="section-header">
-        <div>
-          <h2 id="about-heading">About Leveo</h2>
-        </div>
-      </div>
-      <div class="post-body">
-        <p>Leveo is an AI-powered Chrome extension that acts as a job search command center. It lives in your browser as a side panel and lets job seekers track applications, score their resume against job listings, and draft personalized outreach — all without leaving LinkedIn, Indeed, or Greenhouse.</p>
-      </div>
-    </section>
+    <section class="section" aria-labelledby="videos-heading">
+      <h2 id="videos-heading" class="sr-only">Videos</h2>
+      <div class="series-grid">
 
-    <section class="section" aria-labelledby="role-heading">
-      <div class="section-header">
-        <div>
-          <h2 id="role-heading">My Role</h2>
-        </div>
-      </div>
-      <div class="post-body">
-        <p>Brought on as Leveo's Developer Advocate to build awareness and demonstrate the product to a real audience. I produce a 12-video content series distributed across YouTube, Instagram, LinkedIn, and TikTok — showing real people how Leveo fits into their actual job search. Not scripted demos, but genuine content that developers and job seekers can relate to and act on.</p>
-      </div>
-    </section>
+        <a class="series-card" href="https://youtube.com/shorts/XOd1JzdupvE" target="_blank" rel="noopener noreferrer">
+          <img class="series-thumb" src="../../assets/img/leveo-thumb-1.jpg" alt="Meet Leveo — The Chrome Extension Changing How You Job Search">
+          <div class="series-body">
+            <span class="series-number">01</span>
+            <h3 class="series-title">Meet Leveo — The Chrome Extension Changing How You Job Search</h3>
+            <p class="series-desc">First look at Leveo — how it plugs into any job board, scores your resume against the listing, writes your cover letter, and shows who you know at the company. All from one button in your browser.</p>
+          </div>
+        </a>
 
-    <section class="section" aria-labelledby="deliverables-heading">
-      <div class="section-header">
-        <div>
-          <h2 id="deliverables-heading">Deliverables</h2>
-        </div>
-      </div>
-      <div class="post-body">
-        <ul>
-          <li>12-video content series (in production)</li>
-          <li>Distribution across YouTube, Instagram, LinkedIn, and TikTok</li>
-          <li>Product walkthroughs and feature breakdowns</li>
-          <li>Lifestyle content showing Leveo in a real job search context</li>
-        </ul>
-      </div>
-    </section>
+        <a class="series-card" href="https://youtube.com/shorts/rPcVo7G2Q0o" target="_blank" rel="noopener noreferrer">
+          <img class="series-thumb" src="../../assets/img/leveo-thumb-2.jpg" alt="Stop Clicking Easy Apply — Use Leveo's Resume Fit Score Instead">
+          <div class="series-body">
+            <span class="series-number">02</span>
+            <h3 class="series-title">Stop Clicking Easy Apply — Use Leveo's Resume Fit Score Instead</h3>
+            <p class="series-desc">Upload your resume once. Leveo scores it against any job description from 0 to 100, shows your strengths and gaps, writes a personalized cover letter, and rewrites your resume for that specific role.</p>
+          </div>
+        </a>
 
-    <section class="section" aria-labelledby="content-heading">
-      <div class="section-header">
-        <div>
-          <h2 id="content-heading">Content</h2>
-        </div>
-      </div>
-      <div class="grid two">
-        <iframe
-          class="video-embed"
-          src="https://www.youtube.com/embed/XOd1JzdupvE"
-          title="Leveo — Video 1"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
-        <iframe
-          class="video-embed"
-          src="https://www.youtube.com/embed/rPcVo7G2Q0o"
-          title="Leveo — Video 2"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen>
-        </iframe>
       </div>
     </section>
 
