@@ -110,6 +110,12 @@ img {
   text-decoration: none;
   font-size: 0.9rem;
   font-weight: 500;
+  white-space: nowrap;
+}
+
+.nav-links a:hover,
+.nav-links a:visited {
+  color: var(--muted);
 }
 
 .nav-links a:hover {
@@ -187,7 +193,7 @@ img {
 }
 
 .hero-headline {
-  font-size: clamp(3rem, 7vw, 5.5rem);
+  font-size: clamp(1.9rem, 8vw, 5.5rem);
   font-weight: 900;
   line-height: 1.05;
   letter-spacing: -0.02em;
@@ -440,10 +446,11 @@ a.item-card:hover {
   width: min(1120px, calc(100% - 32px));
   margin: 0 auto;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 16px;
   flex-wrap: wrap;
   align-items: center;
+  text-align: center;
 }
 
 .footer-inner p {
@@ -460,14 +467,24 @@ a.item-card:hover {
 /* ── Mobile ── */
 
 @media (max-width: 820px) {
-  .nav-shell {
-    display: flex;
-    align-items: center;
-    padding: 10px 0;
+  .grid,
+  .grid.two {
+    grid-template-columns: 1fr;
   }
 
-  .nav-right {
-    gap: 4px;
+  .hero {
+    padding: 64px 0 40px;
+  }
+
+  .section {
+    padding: 40px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  /* Hide nav social icons — they appear in the hero */
+  .nav-social {
+    display: none;
   }
 
   .nav-links a {
@@ -476,11 +493,29 @@ a.item-card:hover {
   }
 
   .hero {
-    padding: 64px 0 48px;
+    padding: 44px 0 32px;
   }
 
-  .grid,
-  .grid.two {
-    grid-template-columns: 1fr;
+  .hero-tagline {
+    font-size: 1.25rem;
+  }
+
+  .lede {
+    font-size: 1rem;
+  }
+
+  .section {
+    padding: 32px 0;
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .nav-links a {
+    padding: 0 6px;
+    font-size: 0.8rem;
   }
 }

@@ -5,18 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Talks | My Portfolio Template</title>
   <meta name="description" content="Example talks index for the portfolio template.">
-  <link rel="icon" href="../assets/img/avatar-placeholder.svg" type="image/svg+xml">
+  <link rel="icon" href="../assets/img/avatar.jpg" type="image/jpeg">
   <link rel="stylesheet" href="../assets/css/styles.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem("portfolio-theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    })();
+  </script>
 </head>
 <body>
   <header class="site-header">
     <div class="nav-shell">
-      <a class="brand" href="../index.html" data-home-link>
-        <span class="brand-mark">E</span>
-        <span data-bind="site.name">Example Builder</span>
+      <a class="nav-avatar-link" href="../index.html" data-home-link aria-label="Home">
+        <img class="nav-avatar" data-bind-src="site.avatar" src="../assets/img/avatar.jpg" alt="Nyamekye Annor">
       </a>
-      <nav class="nav-links" aria-label="Main navigation" data-render="nav"></nav>
-      <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme">◐</button>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Main navigation" data-render="nav"></nav>
+        <div class="nav-social social-links" data-render="social"></div>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
+      </div>
     </div>
   </header>
 
@@ -40,8 +48,7 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p data-bind="site.footerNote">Built from a static portfolio template.</p>
-      <div class="social-links" data-render="social"></div>
+      <p data-bind="site.footerNote">© 2026 Nyamekye Annor · Developer Advocate · matcha > coffee</p>
     </div>
   </footer>
 
