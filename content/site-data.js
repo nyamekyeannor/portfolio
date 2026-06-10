@@ -1,21 +1,21 @@
 window.PORTFOLIO_DATA = {
   site: {
-    name: "Example Builder",
+    name: "Nyamekye Annor",
     role: "Developer Advocate",
-    kicker: "Demos, writing, and talks",
-    headline: "I turn rough technical work into useful public artifacts.",
+    kicker: "DevRel Engineer · AI Builder · Technical Writer · Storyteller",
+    headline: "I build. Then I explain it.",
     summary:
-      "Use this portfolio as a starting point for projects, field notes, talks, and custom sections. Replace the example data with your own work.",
+      "I build apps and integrations on top of developer tools and AI products — then turn what I learn into content that helps real users actually understand and ship with them.",
     avatar: "assets/img/avatar-placeholder.svg",
     primaryCta: {
-      label: "Read the latest",
+      label: "Explore my work",
       href: "blog/"
     },
     secondaryCta: {
       label: "View projects",
       href: "projects/"
     },
-    footerNote: "Built from a static portfolio template. Replace this with your own note."
+    footerNote: "© 2026 Nyamekye Annor · Developer Advocate"
   },
 
   nav: [
@@ -27,15 +27,17 @@ window.PORTFOLIO_DATA = {
   ],
 
   social: [
-    { label: "GitHub", href: "https://github.com/example" },
-    { label: "LinkedIn", href: "https://www.linkedin.com/in/example" },
-    { label: "Email", href: "mailto:hello@example.com" }
+    { label: "YouTube", href: "https://youtube.com/@annorcode" },
+    { label: "Instagram", href: "https://instagram.com/annorcode" },
+    { label: "LinkedIn", href: "https://linkedin.com/in/nyamekye-annor" },
+    { label: "TikTok", href: "https://tiktok.com/@annorcode" },
+    { label: "Email", href: "mailto:annorcode@gmail.com" }
   ],
 
   proofPoints: [
-    { label: "Projects", value: "3" },
-    { label: "Field Notes", value: "4" },
-    { label: "Talks", value: "2" }
+    { label: "Projects", value: "5" },
+    { label: "Partnerships", value: "5" },
+    { label: "Content Platforms", value: "4" }
   ],
 
   landingCards: [
@@ -64,44 +66,51 @@ window.PORTFOLIO_DATA = {
 
   projects: [
     {
-      title: "Demo Lab",
-      description: "A fake project for collecting small technical demos before they become posts or talks.",
-      href: "https://github.com/example/demo-lab",
-      status: "Example",
-      tags: ["static site", "docs"]
+      title: "Typesense Conversational Search",
+      description: "A natural language search interface built on Typesense showing how developers can move beyond keyword search.",
+      href: "projects/",
+      tags: ["Typesense", "Vanilla JS"]
     },
     {
-      title: "Trace Notes",
-      description: "A fake notebook that turns errors, screenshots, and decisions into searchable notes.",
-      href: "https://github.com/example/trace-notes",
-      status: "Prototype",
-      tags: ["debugging", "notes"]
+      title: "Typesense Car Search",
+      description: "Instant search demo for a car inventory dataset demonstrating typo tolerance, faceting, and real-time filtering.",
+      href: "projects/",
+      tags: ["Typesense", "InstantSearch"]
     },
     {
-      title: "Workshop Kit",
-      description: "A fake starter kit for turning a live demo into a repeatable workshop.",
-      href: "https://github.com/example/workshop-kit",
-      status: "Draft",
-      tags: ["talks", "teaching"]
+      title: "Typesense Book Search",
+      description: "Book discovery demo using Typesense with full-text search filtering by genre, author, and publication date.",
+      href: "projects/",
+      tags: ["Typesense", "JavaScript"]
+    },
+    {
+      title: "XKCD Search App",
+      description: "Semantic search across the entire XKCD comic archive, a hands-on exploration of search indexing and API design.",
+      href: "projects/",
+      tags: ["Search API", "Vanilla JS"]
+    },
+    {
+      title: "Harmonii",
+      description: "Independent app connecting people through shared music taste, built from scratch with custom UI and music API integration.",
+      href: "projects/",
+      tags: ["JavaScript", "Music API"]
     }
   ],
 
   talks: [
     {
-      title: "From Scratchpad To System",
-      event: "Example Conf",
-      date: "2026-09-15",
-      description: "How to turn one messy build into a repeatable lesson, demo, and article.",
+      title: "Decoded Stories Podcast",
+      event: "Host & Creator",
+      description: "Conversations at the intersection of tech, creativity, and culture featuring developers, creators, and people building interesting things. Available on Spotify and YouTube.",
       href: "talks/",
-      tags: ["workflow", "writing"]
+      tags: ["podcast", "creator"]
     },
     {
-      title: "The Demo Is The Spec",
-      event: "Local Developer Meetup",
-      date: "2026-11-04",
-      description: "A practical talk about using demos to discover unclear docs, product gaps, and missing examples.",
+      title: "AnnorCode",
+      event: "Lifestyle Content",
+      description: "Lifestyle content about life as a developer and creator — desk setup, brand partnerships, and the behind-the-scenes of building in public across YouTube, Instagram, and TikTok.",
       href: "talks/",
-      tags: ["demos", "developer experience"]
+      tags: ["content", "creator"]
     }
   ],
 
@@ -134,21 +143,22 @@ window.PORTFOLIO_DATA = {
 
   sections: [
     {
-      title: "Now",
-      description: "Use this section for current focus areas, open questions, or active experiments.",
+      title: "Brand Partnerships",
       items: [
-        "Replace this with what you are building this month.",
-        "Add the topic you are writing about next.",
-        "Link the talk, demo, or case study you want people to notice."
+        "Leveo — AI-powered Chrome extension — video series + lifestyle content (Active)",
+        "Typesense — Open-source search engine — demo apps + educational content",
+        "Hyperskill — Developer learning platform — sponsored content",
+        "CodeCrafters — Advanced coding challenges — sponsored content",
+        "Pro North Saddle Stool — Ergonomic furniture — lifestyle + desk setup content"
       ]
     },
     {
-      title: "Working Rules",
-      description: "Use this section to show how you approach work.",
+      title: "Now",
       items: [
-        "Start from the real build.",
-        "Show the tradeoff.",
-        "Keep the lesson practical."
+        "Building my DevRel portfolio and pivoting into Developer Advocacy",
+        "Active brand partnership with Leveo — AI-powered Chrome extension",
+        "Producing weekly content under the AnnorCode brand across YouTube, Instagram, and TikTok",
+        "Hosting the Decoded Stories podcast"
       ]
     }
   ]
