@@ -358,6 +358,12 @@ a.item-card:hover {
   display: block;
 }
 
+.item-card-thumb--full {
+  aspect-ratio: auto;
+  object-fit: initial;
+  object-position: initial;
+}
+
 .item-card-body {
   padding: 16px 20px 20px;
   display: flex;
