@@ -101,7 +101,6 @@ window.PORTFOLIO_DATA = {
       description: "Conversations at the intersection of tech, creativity, and culture — featuring developers, creators, and people building interesting things.",
       href: "talks/decoded-stories/",
       thumbnail: "assets/img/decoded-stories-cover.jpg",
-      thumbnailFull: true,
       tags: ["Podcast", "Spotify", "YouTube"]
     },
     {
