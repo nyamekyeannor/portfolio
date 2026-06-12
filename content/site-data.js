@@ -96,18 +96,20 @@ window.PORTFOLIO_DATA = {
 
   talks: [
     {
-      title: "Decoded Stories Podcast",
-      event: "Content & Media",
-      description: "Coming soon.",
-      href: "talks/",
-      tags: ["podcast"]
+      title: "Decoded Stories",
+      event: "Podcast · Host & Creator",
+      description: "Conversations at the intersection of tech, creativity, and culture — featuring developers, creators, and people building interesting things.",
+      href: "talks/decoded-stories/",
+      thumbnail: "assets/img/decoded-stories-thumb.jpg",
+      tags: ["Podcast", "Spotify", "YouTube"]
     },
     {
-      title: "AnnorCode YouTube",
-      event: "Content & Media",
-      description: "Coming soon.",
-      href: "talks/",
-      tags: ["youtube"]
+      title: "AnnorCode",
+      event: "Lifestyle & Dev Content",
+      description: "Behind-the-scenes of building as a creator-developer — desk setup, brand partnerships, and life as a dev across YouTube, Instagram, and TikTok.",
+      href: "https://youtube.com/@annorcode",
+      thumbnail: "assets/img/annorcode-thumb.jpg",
+      tags: ["YouTube", "Instagram", "TikTok"]
     }
   ],
 

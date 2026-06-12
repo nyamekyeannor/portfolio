@@ -65,20 +65,34 @@
   function createCard(item, meta) {
     const tagName = item.href ? "a" : "article";
     const card = document.createElement(tagName);
-    card.className = "item-card";
     if (item.href) card.href = link(item.href);
 
     const eyebrow = item.eyebrow || item.status || item.event || meta;
     const date = item.date ? `<span class="item-date">${escapeHtml(item.date)}</span>` : "";
     const status = eyebrow ? `<span class="item-eyebrow">${escapeHtml(eyebrow)}</span>` : "";
 
-    card.innerHTML = `
-      ${status}
-      <h3>${escapeHtml(item.title)}</h3>
-      <p>${escapeHtml(item.description || item.summary || "")}</p>
-      ${date}
-      ${tagsHtml(item.tags)}
-    `;
+    if (item.thumbnail) {
+      card.className = "item-card has-thumb";
+      card.innerHTML = `
+        <img class="item-card-thumb" src="${escapeHtml(link(item.thumbnail))}" alt="${escapeHtml(item.title)}">
+        <div class="item-card-body">
+          ${status}
+          <h3>${escapeHtml(item.title)}</h3>
+          <p>${escapeHtml(item.description || item.summary || "")}</p>
+          ${date}
+          ${tagsHtml(item.tags)}
+        </div>
+      `;
+    } else {
+      card.className = "item-card";
+      card.innerHTML = `
+        ${status}
+        <h3>${escapeHtml(item.title)}</h3>
+        <p>${escapeHtml(item.description || item.summary || "")}</p>
+        ${date}
+        ${tagsHtml(item.tags)}
+      `;
+    }
 
     return card;
   }
