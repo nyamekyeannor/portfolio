@@ -100,9 +100,8 @@ window.PORTFOLIO_DATA = {
       event: "Podcast · Host & Creator",
       description: "Conversations at the intersection of tech, creativity, and culture — featuring developers, creators, and people building interesting things.",
       href: "talks/decoded-stories/",
-      thumbnail: "assets/img/decoded-stories-thumb.jpg",
+      thumbnail: "assets/img/decoded-stories-cover.jpg",
       thumbnailFull: true,
-      thumbnailPosition: "top",
       tags: ["Podcast", "Spotify", "YouTube"]
     },
     {
