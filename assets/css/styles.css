@@ -74,9 +74,19 @@ img {
 .nav-avatar-link {
   flex: 0 0 auto;
   text-decoration: none;
-  display: block;
-  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: var(--radius);
   outline-offset: 2px;
+}
+
+.nav-name {
+  font-size: 15px;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+  color: var(--text);
+  white-space: nowrap;
 }
 
 .nav-avatar {
