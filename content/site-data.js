@@ -101,7 +101,7 @@ window.PORTFOLIO_DATA = {
       description: "Conversations at the intersection of tech, creativity, and culture — featuring developers, creators, and people building interesting things.",
       href: "talks/decoded-stories/",
       thumbnail: "assets/img/decoded-stories-cover.jpg",
-      tags: ["Podcast", "Spotify", "YouTube"]
+      tags: []
     },
     {
       title: "AnnorCode",
@@ -110,7 +110,7 @@ window.PORTFOLIO_DATA = {
       href: "https://youtube.com/@annorcode",
       thumbnail: "assets/img/annorcode-thumb.jpg",
       thumbnailFull: true,
-      tags: ["YouTube", "Instagram", "TikTok"]
+      tags: []
     }
   ],
 
