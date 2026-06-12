@@ -74,8 +74,9 @@
     if (item.thumbnail) {
       card.className = "item-card has-thumb";
       const thumbClass = item.thumbnailFull ? "item-card-thumb item-card-thumb--full" : "item-card-thumb";
+      const thumbStyle = item.thumbnailPosition ? ` style="object-position:${escapeHtml(item.thumbnailPosition)}"` : "";
       card.innerHTML = `
-        <img class="${thumbClass}" src="${escapeHtml(link(item.thumbnail))}" alt="${escapeHtml(item.title)}">
+        <img class="${thumbClass}"${thumbStyle} src="${escapeHtml(link(item.thumbnail))}" alt="${escapeHtml(item.title)}">
         <div class="item-card-body">
           ${status}
           <h3>${escapeHtml(item.title)}</h3>
