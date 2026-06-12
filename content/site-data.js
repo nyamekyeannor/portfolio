@@ -110,6 +110,7 @@ window.PORTFOLIO_DATA = {
       description: "Behind-the-scenes of building as a creator-developer — desk setup, brand partnerships, and life as a dev across YouTube, Instagram, and TikTok.",
       href: "https://youtube.com/@annorcode",
       thumbnail: "assets/img/annorcode-thumb.jpg",
+      thumbnailFull: true,
       tags: ["YouTube", "Instagram", "TikTok"]
     }
   ],
