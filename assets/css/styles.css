@@ -352,16 +352,9 @@ a.item-card:hover {
 
 .item-card-thumb {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  height: 280px;
   object-fit: cover;
-  object-position: top;
   display: block;
-}
-
-.item-card-thumb--full {
-  aspect-ratio: auto;
-  object-fit: initial;
-  object-position: initial;
 }
 
 .item-card-body {
