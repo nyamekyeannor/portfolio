@@ -230,6 +230,35 @@ img {
   font-size: 1.1rem;
 }
 
+.hero-handle {
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 400;
+  margin: 6px 0 20px;
+}
+
+.pronounce-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0;
+  vertical-align: middle;
+  margin-left: 4px;
+  transition: color 120ms, background 120ms;
+}
+
+.pronounce-btn:hover {
+  color: var(--text);
+  background: var(--surface-soft);
+}
+
 .button-row {
   display: flex;
   gap: 12px;
