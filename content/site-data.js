@@ -92,6 +92,14 @@ window.PORTFOLIO_DATA = {
 
   blogPosts: [
     {
+      title: "How a Bathroom Break Changed My Life",
+      slug: "how-a-bathroom-break-changed-my-life",
+      date: "2026-06-12",
+      summary: "Before I ever wrote a line of code I was a security guard, a temp contractor, and a QA tester for virtual guns. This is how a bathroom break at a military simulation company changed everything.",
+      href: "blog/how-a-bathroom-break-changed-my-life/",
+      tags: ["career", "origin story"]
+    },
+    {
       title: "Coming Soon — First post dropping soon",
       slug: "coming-soon",
       date: "2026-06-10",
