@@ -5,7 +5,7 @@ window.PORTFOLIO_DATA = {
     kicker: "DevRel Engineer · AI Builder · Technical Writer · Storyteller",
     headline: "I build. Then I explain it.",
     summary:
-      "I build apps and integrations on top of developer tools and AI products — then turn what I learn into content that helps real users actually understand and ship with them.",
+      "I build real things with developer tools — then turn what I learn into content people actually want to watch.",
     avatar: "assets/img/avatar.jpg",
     primaryCta: {
       label: "Explore my work",
