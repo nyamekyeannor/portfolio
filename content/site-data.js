@@ -99,14 +99,6 @@ window.PORTFOLIO_DATA = {
       href: "blog/how-a-bathroom-break-changed-my-life/",
       tags: ["career", "origin story"]
     },
-    {
-      title: "Coming Soon — First post dropping soon",
-      slug: "coming-soon",
-      date: "2026-06-10",
-      summary: "First post dropping soon.",
-      href: "blog/",
-      tags: []
-    }
   ],
 
   sections: [
