@@ -63,30 +63,6 @@ window.PORTFOLIO_DATA = {
 
   projects: [
     {
-      title: "Typesense Conversational Search",
-      description: "A natural language search interface built on Typesense showing how developers can move beyond keyword search.",
-      href: "projects/",
-      tags: ["Typesense", "Vanilla JS"]
-    },
-    {
-      title: "Typesense Car Search",
-      description: "Instant search demo for a car inventory dataset demonstrating typo tolerance, faceting, and real-time filtering.",
-      href: "projects/",
-      tags: ["Typesense", "InstantSearch"]
-    },
-    {
-      title: "Typesense Book Search",
-      description: "Book discovery demo using Typesense with full-text search filtering by genre, author, and publication date.",
-      href: "projects/",
-      tags: ["Typesense", "JavaScript"]
-    },
-    {
-      title: "XKCD Search App",
-      description: "Semantic search across the entire XKCD comic archive, a hands-on exploration of search indexing and API design.",
-      href: "projects/",
-      tags: ["Search API", "Vanilla JS"]
-    },
-    {
       title: "Leveo Content Series",
       description: "Developer Advocate (Contract) — Producing a 12-video content series across YouTube, Instagram, LinkedIn, and TikTok for an AI-powered Chrome extension built for job seekers.",
       href: "projects/leveo/",
