@@ -64,7 +64,7 @@ window.PORTFOLIO_DATA = {
   projects: [
     {
       title: "Leveo Content Series",
-      description: "Developer Advocate (Contract) — Producing a 12-video content series across YouTube, Instagram, LinkedIn, and TikTok for an AI-powered Chrome extension built for job seekers.",
+      description: "Developer Advocate (Contract) — Producing a 12-video content series across YouTube, Instagram, LinkedIn, and TikTok for an AI-powered Chrome extension built for job seekers. 3 videos published.",
       href: "projects/leveo/",
       tags: ["Developer Advocacy", "Content Strategy", "Video Production"]
     }
