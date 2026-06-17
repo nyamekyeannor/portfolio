@@ -1,0 +1,489 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootcamp, Burnout, and the Dog It Brought Out of Me | Nyamekye Annor</title>
+  <meta name="description" content="I spent two years hiding from JavaScript, started a midnight study group that didn't work, and eventually quit my job to go all in on a coding bootcamp. This is what happened.">
+  <link rel="icon" href="../../assets/img/avatar.jpg" type="image/jpeg">
+  <link rel="stylesheet" href="../../assets/css/styles.css">
+  <script>
+    (function () {
+      var t = localStorage.getItem("portfolio-theme");
+      document.documentElement.dataset.theme = t === "light" ? "light" : "dark";
+    })();
+  </script>
+  <style>
+    /* ── Post header ── */
+    .post-page-header {
+      padding: 56px 0 40px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 48px;
+    }
+
+    .post-eyebrow {
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      color: var(--accent-blue);
+      margin: 0 0 16px;
+    }
+
+    .post-title {
+      font-size: clamp(1.9rem, 5vw, 3.2rem);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.025em;
+      margin: 0 0 24px;
+    }
+
+    .post-meta-row {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      flex-wrap: wrap;
+    }
+
+    .copy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 4px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 0.8rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: color 120ms, border-color 120ms;
+      font-family: inherit;
+    }
+
+    .copy-btn:hover {
+      color: var(--text);
+      border-color: var(--accent-blue);
+    }
+
+    /* ── Two-column layout ── */
+    .post-layout {
+      display: grid;
+      grid-template-columns: 210px 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    /* ── Sidebar ── */
+    .post-sidebar {
+      position: sticky;
+      top: 88px;
+    }
+
+    .sidebar-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 0 0 10px;
+    }
+
+    .sidebar-links {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sidebar-links a {
+      display: block;
+      padding: 7px 0 7px 14px;
+      border-left: 2px solid var(--border);
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 0.86rem;
+      line-height: 1.45;
+      transition: color 120ms, border-color 120ms;
+    }
+
+    .sidebar-links a:hover {
+      color: var(--text);
+      border-left-color: var(--accent-blue);
+    }
+
+    /* ── Article body ── */
+    .post-article {
+      min-width: 0;
+      padding-bottom: 32px;
+    }
+
+    .post-article p {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text);
+      margin: 0 0 22px;
+    }
+
+    .post-article h2 {
+      font-size: 1.55rem;
+      font-weight: 800;
+      letter-spacing: -0.01em;
+      margin: 64px 0 18px;
+      scroll-margin-top: 90px;
+    }
+
+    /* ── Author bio ── */
+    .author-bio {
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      margin: 56px 0 36px;
+    }
+
+    .author-avatar {
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      object-fit: cover;
+      flex-shrink: 0;
+      border: 2px solid var(--border);
+      display: block;
+    }
+
+    .author-info {
+      flex: 1;
+      min-width: 0;
+    }
+
+    .author-name {
+      font-size: 1rem;
+      font-weight: 700;
+      margin: 0 0 6px;
+    }
+
+    .author-text {
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.65;
+      margin: 0 0 14px;
+    }
+
+    .author-social {
+      display: flex;
+      gap: 2px;
+    }
+
+    .author-social a {
+      width: 36px;
+      height: 36px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: var(--text);
+      text-decoration: none;
+      transition: color 120ms, background 120ms;
+    }
+
+    .author-social a:hover {
+      color: var(--text);
+      background: var(--surface-soft);
+    }
+
+    /* ── Read Next ── */
+    .read-next {
+      border-top: 1px solid var(--border);
+      padding-top: 32px;
+      margin-bottom: 64px;
+    }
+
+    .read-next-label {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--muted);
+      margin: 0 0 16px;
+    }
+
+    .read-next-card {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .read-next-card h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      margin: 0;
+      transition: color 120ms;
+    }
+
+    .read-next-card:hover h3 {
+      color: var(--accent-blue);
+    }
+
+    .read-next-card p {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* ── Scroll to top ── */
+    .scroll-top-btn {
+      position: fixed;
+      bottom: 32px;
+      right: 32px;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px solid var(--border);
+      background: var(--surface);
+      color: var(--text);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      line-height: 1;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 200ms, background 120ms, border-color 120ms;
+      box-shadow: var(--shadow);
+      z-index: 10;
+    }
+
+    .scroll-top-btn.visible {
+      opacity: 1;
+      pointer-events: auto;
+    }
+
+    .scroll-top-btn:hover {
+      background: var(--surface-soft);
+      border-color: var(--accent-blue);
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 820px) {
+      .post-layout {
+        grid-template-columns: 1fr;
+      }
+
+      .post-sidebar {
+        display: none;
+      }
+
+      .post-title {
+        font-size: clamp(1.7rem, 7vw, 2.4rem);
+      }
+
+      .author-bio {
+        flex-direction: column;
+        gap: 14px;
+      }
+
+      .scroll-top-btn {
+        bottom: 20px;
+        right: 20px;
+      }
+    }
+  </style>
+</head>
+<body data-blog-slug="bootcamp-burnout-and-the-dog-it-brought-out-of-me">
+  <header class="site-header">
+    <div class="nav-shell">
+      <a class="nav-avatar-link" href="../../index.html" data-home-link aria-label="Home">
+        <img class="nav-avatar" data-bind-src="site.avatar" src="../../assets/img/avatar.jpg" alt="Nyamekye Annor">
+        <span class="nav-name">Nyamekye Annor</span>
+      </a>
+      <div class="nav-right">
+        <nav class="nav-links" aria-label="Main navigation" data-render="nav"></nav>
+        <div class="nav-social social-links" data-render="social"></div>
+        <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
+        <button class="hamburger" type="button" aria-label="Open menu" aria-expanded="false" data-hamburger></button>
+      </div>
+    </div>
+    <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+      <div class="mobile-menu-inner">
+        <nav class="mobile-nav-links" aria-label="Mobile navigation" data-render="nav"></nav>
+        <div class="mobile-menu-bottom">
+          <div class="social-links" data-render="social"></div>
+          <button class="theme-toggle" type="button" data-theme-toggle aria-label="Toggle color theme"></button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="page">
+
+    <a class="back-link" href="../../blog/">← Back to Blog</a>
+
+    <header class="post-page-header">
+      <p class="post-eyebrow">Career · Bootcamp Story</p>
+      <h1 class="post-title">Bootcamp, Burnout, and the Dog It Brought Out of Me</h1>
+      <div class="post-meta-row">
+        <span>June 12, 2026 · 7 min read</span>
+        <button class="copy-btn" id="copy-link-btn" type="button" aria-label="Copy link to this post">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+          Copy link
+        </button>
+      </div>
+    </header>
+
+    <div class="post-layout">
+
+      <!-- Sticky sidebar -->
+      <aside class="post-sidebar">
+        <p class="sidebar-label">On this page</p>
+        <nav class="sidebar-links" aria-label="Article sections">
+          <a href="#tutorial-hell-is-real-and-i-lived-there">Tutorial Hell Is Real and I Lived There</a>
+          <a href="#night-owls">Night Owls</a>
+          <a href="#how-i-found-lambda-school">How I Found Lambda School</a>
+          <a href="#quitting-my-job-to-go-all-in">Quitting My Job to Go All In</a>
+          <a href="#daddy-is-sleeping">Daddy Is Sleeping</a>
+          <a href="#what-bootcamp-actually-taught-me">What Bootcamp Actually Taught Me</a>
+        </nav>
+      </aside>
+
+      <!-- Article -->
+      <article class="post-article">
+
+        <p>After the bathroom break moment I told you about in the last post, I went home and immediately pulled up Google. "How do I learn to code." Classic first move.</p>
+        <p>What happened next was two years of almost making it. Two years of starting and stopping. Two years of telling myself I was learning when really I was just consuming. I watched so many tutorials I could recite them back to you. I just couldn't build anything.</p>
+        <p>This is that story.</p>
+
+        <h2 id="tutorial-hell-is-real-and-i-lived-there">Tutorial Hell Is Real and I Lived There</h2>
+        <p>I want to be really honest about this because nobody talks about it the way it actually happens.</p>
+        <p>I did Codecademy. I did freeCodeCamp. I did YouTube videos from three different people who all had different opinions about what language you should start with. I started with Python because someone said it was beginner-friendly. Then I switched to JavaScript because someone said that's where the jobs are. Then I went back to Python because I got scared of JavaScript.</p>
+        <p>I was hiding. I know that now. Every tutorial I started was a way to feel like I was doing something without actually having to test myself.</p>
+        <p>The thing about tutorial hell is it feels productive. You're learning syntax, you're writing along with the instructor, you're finishing modules and getting little checkmarks. But the second the tutorial ends and you open a blank file, you have nothing. Because you never built anything. You just followed someone else building something.</p>
+        <p>I spent two years in that loop. I'm not proud of it but I'm also not embarrassed by it anymore. That's just what it looks like before you figure out how to actually learn.</p>
+
+        <h2 id="night-owls">Night Owls</h2>
+        <p>At some point I decided accountability was the problem. If I had people to learn with, I'd actually do it.</p>
+        <p>So I put together a little group. Guys from my neighborhood, a couple of people I knew online, anyone who said they wanted to learn how to code. We called ourselves the Night Owls because we were all working during the day and learning at night. Very original.</p>
+        <p>The first week was great. We had a group chat. People were sharing resources. Someone found a free JavaScript course. We set a schedule — Tuesdays and Thursdays at 10pm, we'd hop on a call and work through problems together.</p>
+        <p>By week three it was me and one other guy. By week five it was just me staring at a Zoom call waiting for people to join who weren't coming.</p>
+        <p>I don't blame them. Life gets in the way. We all had jobs, families, responsibilities. A 10pm coding session is easy to skip when you're tired. I skipped plenty of times myself. But something about watching that group fall apart made me realize I needed a structure I couldn't opt out of. I needed something with real stakes.</p>
+
+        <h2 id="how-i-found-lambda-school">How I Found Lambda School</h2>
+        <p>I don't even remember exactly how I found it. I think it was a Reddit thread, or maybe someone tweeted about it. Lambda School. A full-stack web development program, full-time, six months, and you didn't pay anything until you got a job making over fifty thousand dollars a year.</p>
+        <p>That income share agreement was the whole thing for me. I didn't have money to pay for a bootcamp upfront. I barely had money period. But Lambda was betting on me, and I needed someone to do that.</p>
+        <p>I went through their whole application process. You had to pass a pre-course to get in — basic HTML, CSS, some simple JavaScript. All those months of tutorials at least gave me that. I scraped through. But I got in.</p>
+        <p>The program was intense from day one. We're talking eight hours a day, Monday through Friday, with homework and projects on top of that. No hiding from JavaScript now. JavaScript was the whole thing.</p>
+
+        <h2 id="quitting-my-job-to-go-all-in">Quitting My Job to Go All In</h2>
+        <p>This is the part people always ask me about. How did you just quit your job?</p>
+        <p>The honest answer is that I was terrified. I had a steady paycheck. I had responsibilities. Quitting felt irresponsible in every practical sense. But staying and trying to do the bootcamp on the side had already proven it didn't work. I'd tried the juggle. I couldn't code well while I was mentally somewhere else nine hours a day.</p>
+        <p>So I gave notice. I told my manager I was going to a coding bootcamp. She looked at me for a second and said that's brave. I think she meant it as a compliment. I think she also thought I might be making a mistake. Both things can be true.</p>
+        <p>The day I stopped working and started the program full-time, something shifted. I wasn't dabbling anymore. I couldn't afford to. Every sprint, every project, every code review actually counted now. There was no fallback plan. The pressure was uncomfortable and it was exactly what I needed.</p>
+
+        <h2 id="daddy-is-sleeping">Daddy Is Sleeping</h2>
+        <p>About three months into the program, I hit a wall. It wasn't the code — I was keeping up with the material. It was everything else.</p>
+        <p>My son was young at the time. Old enough to notice that daddy was always at the computer, always tired, always saying "just a few more minutes" and meaning an hour. He'd come up to me some evenings and just say "Daddy is sleeping" even when I was awake. Like he'd already accepted that I wasn't fully there.</p>
+        <p>That one hit me hard. It still does.</p>
+        <p>I want to be careful about how I tell this part because I'm not trying to paint myself as a hero grinding through sacrifice. I made choices and some of them had costs. My family felt that. And at the same time — I knew that what I was building was for them too. Not just for me.</p>
+        <p>What I will say is that I started being intentional about being present. I'd finish at 6, step away completely from the computer, be fully there for dinner and bedtime, and then come back after he was asleep if I needed to. The bootcamp actually forced me to learn something harder than React: how to be deliberate about time.</p>
+
+        <h2 id="what-bootcamp-actually-taught-me">What Bootcamp Actually Taught Me</h2>
+        <p>If you ask me what Lambda School taught me, the real answer isn't JavaScript. It isn't React. It isn't how to pass a technical interview, though I learned all of that too.</p>
+        <p>What bootcamp taught me is how to learn under pressure and still ship.</p>
+        <p>Every week we had a sprint challenge. You either submitted it or you didn't. There was no "I'm still figuring it out." You had to figure it out. You had to ask for help faster, debug faster, Google smarter, and then build the thing and push it even when it wasn't perfect.</p>
+        <p>That rhythm of ship and iterate — that's the thing I use every day now. Not just in code. In content creation. In brand partnerships. In this blog. You write the draft, you put it out, you see what lands, and you do it again.</p>
+        <p>The bootcamp didn't just teach me to code. It burned out the part of me that was waiting to be ready and replaced it with something scrappier. Something that goes. That's the dog it brought out. And I'm grateful for that, even for the hard parts.</p>
+
+        <!-- Author bio -->
+        <div class="author-bio">
+          <img class="author-avatar" src="../../assets/img/avatar.jpg" alt="Nyamekye Annor">
+          <div class="author-info">
+            <p class="author-name">Nyamekye Annor</p>
+            <p class="author-text">Developer Advocate, Content Creator, and Storyteller based in Washington DC. I build real things with developer tools — then turn what I learn into content people actually want to watch.</p>
+            <div class="author-social">
+              <a href="https://youtube.com/@annorcode" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.3 5 12 5 12 5s-4.3 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.2.8C6.5 19 12 19 12 19s4.3 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zm-11.8 6.5V9.5l5.4 2.5-5.4 2.5z"/></svg>
+              </a>
+              <a href="https://instagram.com/annorcode" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/nyamekye-annor" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+              </a>
+              <a href="mailto:annorcode@gmail.com" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="20" height="20" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Read Next -->
+        <div class="read-next">
+          <p class="read-next-label">Read Next</p>
+          <a class="read-next-card" href="../../blog/why-im-pivoting-to-devrel/">
+            <h3>Why I&#8217;m Pivoting to DevRel (And Why It Actually Makes Sense) &rarr;</h3>
+            <p>From frontend engineer to developer advocate &#8212; the pivot that&#8217;s been building for years without me knowing it.</p>
+          </a>
+        </div>
+
+      </article>
+    </div>
+
+  </main>
+
+  <!-- Scroll to top -->
+  <button class="scroll-top-btn" id="scroll-top-btn" type="button" aria-label="Scroll to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" width="16" height="16" aria-hidden="true"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p data-bind="site.footerNote">© 2026 Nyamekye Annor · Developer Advocate · matcha > coffee</p>
+    </div>
+  </footer>
+
+  <script>window.PORTFOLIO_BASE = "../../";</script>
+  <script src="../../content/site-data.js"></script>
+  <script src="../../assets/js/render.js"></script>
+  <script>
+    // Copy link button
+    var copyBtn = document.getElementById('copy-link-btn');
+    if (copyBtn) {
+      copyBtn.addEventListener('click', function () {
+        navigator.clipboard.writeText(window.location.href).then(function () {
+          copyBtn.textContent = 'Copied!';
+          setTimeout(function () {
+            copyBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy link';
+          }, 2000);
+        }).catch(function () {
+          var tmp = document.createElement('input');
+          tmp.value = window.location.href;
+          document.body.appendChild(tmp);
+          tmp.select();
+          document.execCommand('copy');
+          document.body.removeChild(tmp);
+          copyBtn.textContent = 'Copied!';
+          setTimeout(function () {
+            copyBtn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg> Copy link';
+          }, 2000);
+        });
+      });
+    }
+
+    // Scroll to top
+    var scrollBtn = document.getElementById('scroll-top-btn');
+    if (scrollBtn) {
+      window.addEventListener('scroll', function () {
+        scrollBtn.classList.toggle('visible', window.scrollY > 300);
+      }, { passive: true });
+      scrollBtn.addEventListener('click', function () {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+      });
+    }
+  </script>
+</body>
+</html>

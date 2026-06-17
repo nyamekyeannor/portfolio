@@ -92,6 +92,14 @@ window.PORTFOLIO_DATA = {
 
   blogPosts: [
     {
+      title: "Bootcamp, Burnout, and the Dog It Brought Out of Me",
+      slug: "bootcamp-burnout-and-the-dog-it-brought-out-of-me",
+      date: "2026-06-12",
+      summary: "I spent two years hiding from JavaScript, started a midnight study group that didn't work, and eventually quit my job to go all in on a coding bootcamp. This is what happened.",
+      href: "blog/bootcamp-burnout-and-the-dog-it-brought-out-of-me/",
+      tags: ["career", "bootcamp"]
+    },
+    {
       title: "How a Bathroom Break Changed My Life",
       slug: "how-a-bathroom-break-changed-my-life",
       date: "2026-06-12",
