@@ -92,6 +92,14 @@ window.PORTFOLIO_DATA = {
 
   blogPosts: [
     {
+      title: "Why I'm Pivoting to DevRel (And Why It Actually Makes Sense)",
+      slug: "why-im-pivoting-to-devrel",
+      date: "2026-06-12",
+      summary: "I didn't know what DevRel was. Then I realized I'd been doing it for years. This is the pivot that's been building without me knowing it.",
+      href: "blog/why-im-pivoting-to-devrel/",
+      tags: ["career", "devrel"]
+    },
+    {
       title: "Bootcamp, Burnout, and the Dog It Brought Out of Me",
       slug: "bootcamp-burnout-and-the-dog-it-brought-out-of-me",
       date: "2026-06-12",
