@@ -177,8 +177,9 @@
   function applyConditionalVisibility() {
     document.querySelectorAll("[data-show-if-many]").forEach((el) => {
       const key = el.dataset.showIfMany;
+      const min = Number(el.dataset.showIfManyMin || 2);
       const items = data[key];
-      if (!Array.isArray(items) || items.length <= 1) {
+      if (!Array.isArray(items) || items.length < min) {
         el.hidden = true;
       }
     });
