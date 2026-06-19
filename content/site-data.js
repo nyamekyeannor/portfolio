@@ -25,7 +25,7 @@ window.PORTFOLIO_DATA = {
 
   social: [
     { label: "X", href: "https://x.com/annorcode" },
-    { label: "GitHub", href: "https://github.com/annorcode" },
+    { label: "GitHub", href: "https://github.com/nyamekyeannor" },
     { label: "LinkedIn", href: "https://linkedin.com/in/nyamekye-annor" },
     { label: "YouTube", href: "https://youtube.com/@annorcode" },
     { label: "Instagram", href: "https://instagram.com/annorcode" }
