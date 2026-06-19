@@ -174,6 +174,16 @@
     });
   }
 
+  function applyConditionalVisibility() {
+    document.querySelectorAll("[data-show-if-many]").forEach((el) => {
+      const key = el.dataset.showIfMany;
+      const items = data[key];
+      if (!Array.isArray(items) || items.length <= 1) {
+        el.hidden = true;
+      }
+    });
+  }
+
   function renderBlogHeader() {
     const slug = document.body.dataset.blogSlug;
     if (!slug) return;
@@ -258,6 +268,7 @@
   renderCollection("talks", data.talks, "Talk");
   renderCollection("blog-posts", data.blogPosts, "Post");
   renderBlogHeader();
+  applyConditionalVisibility();
   setupTheme();
   setupHamburger();
 })();
