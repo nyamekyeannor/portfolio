@@ -94,8 +94,14 @@ img {
   height: 36px;
   border-radius: 50%;
   object-fit: cover;
+  object-position: top center;
   border: 2px solid var(--border);
   display: block;
+  transition: transform 0.2s ease;
+}
+
+.nav-avatar-link:hover .nav-avatar {
+  transform: scale(1.08);
 }
 
 .nav-right {
