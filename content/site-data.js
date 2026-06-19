@@ -74,7 +74,7 @@ window.PORTFOLIO_DATA = {
     {
       title: "Decoded Stories",
       event: "Podcast · Host & Creator",
-      description: "Conversations at the intersection of tech, creativity, and culture — featuring developers, creators, and people building interesting things.",
+      description: "Stories people don't usually tell. Real conversations that go past the highlight reel.",
       href: "talks/decoded-stories/",
       thumbnail: "assets/img/decoded-stories-cover.jpg",
       tags: []
