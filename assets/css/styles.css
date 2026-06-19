@@ -94,7 +94,7 @@ img {
   height: 36px;
   border-radius: 50%;
   object-fit: cover;
-  object-position: top center;
+  object-position: center 20%;
   border: 2px solid var(--border);
   display: block;
   transition: transform 0.2s ease;
