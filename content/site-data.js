@@ -100,6 +100,14 @@ window.PORTFOLIO_DATA = {
       tags: ["career", "devrel"]
     },
     {
+      title: "Why Leveo's Resume Fit Score Actually Works",
+      slug: "why-leveos-resume-fit-score-actually-works",
+      date: "2026-06-19",
+      summary: "Most resume tools score you against a generic template. Leveo scores you against the actual job posting in front of you. Here's a breakdown of why that distinction actually matters.",
+      href: "blog/why-leveos-resume-fit-score-actually-works/",
+      tags: ["developer tools", "devrel"]
+    },
+    {
       title: "Bootcamp, Burnout, and the Dog It Brought Out of Me",
       slug: "bootcamp-burnout-and-the-dog-it-brought-out-of-me",
       date: "2026-06-12",

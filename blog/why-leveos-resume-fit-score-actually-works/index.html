@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>How a Bathroom Break Changed My Life | Nyamekye Annor</title>
-  <meta name="description" content="Before I ever wrote a line of code I was a security guard, a temp contractor, and a QA tester for virtual guns. This is how a bathroom break at a military simulation company changed everything.">
+  <title>Why Leveo's Resume Fit Score Actually Works | Nyamekye Annor</title>
+  <meta name="description" content="Most resume tools score you against a generic template. Leveo scores you against the actual job posting in front of you. Here's a breakdown of why that distinction actually matters.">
   <link rel="icon" href="../../assets/img/avatar.jpg" type="image/jpeg">
   <link rel="stylesheet" href="../../assets/css/styles.css">
   <script>
@@ -133,6 +133,18 @@
       scroll-margin-top: 90px;
     }
 
+    .post-article ul {
+      font-size: 1.05rem;
+      line-height: 1.85;
+      color: var(--text);
+      margin: 0 0 22px;
+      padding-left: 24px;
+    }
+
+    .post-article ul li {
+      margin-bottom: 8px;
+    }
+
     /* ── Author bio ── */
     .author-bio {
       display: flex;
@@ -213,19 +225,19 @@
       display: flex;
       flex-direction: column;
       gap: 8px;
+      text-decoration: none;
+      color: inherit;
     }
 
     .read-next-card h3 {
       font-size: 1.05rem;
       font-weight: 700;
       margin: 0;
+      transition: color 120ms;
     }
 
-    .read-next-card p {
-      font-size: 0.9rem;
-      color: var(--muted);
-      margin: 0;
-      line-height: 1.6;
+    .read-next-card:hover h3 {
+      color: var(--accent-blue);
     }
 
     /* ── Scroll to top ── */
@@ -288,7 +300,7 @@
     }
   </style>
 </head>
-<body data-blog-slug="how-a-bathroom-break-changed-my-life">
+<body data-blog-slug="why-leveos-resume-fit-score-actually-works">
   <header class="site-header">
     <div class="nav-shell">
       <a class="nav-avatar-link" href="../../index.html" data-home-link aria-label="Home">
@@ -315,13 +327,13 @@
 
   <main class="page">
 
-    <a class="back-link" href="../../blog/">← Back to Blog</a>
+    <a class="back-link" href="../../blog/">&#8592; Back to Blog</a>
 
     <header class="post-page-header">
-      <p class="post-eyebrow">Career · Origin Story</p>
-      <h1 class="post-title">How a Bathroom Break Changed My Life</h1>
+      <p class="post-eyebrow">Developer Tools &#xB7; DevRel</p>
+      <h1 class="post-title">Why Leveo&#8217;s Resume Fit Score Actually Works</h1>
       <div class="post-meta-row">
-        <span>June 12, 2026 · 5 min read</span>
+        <span>June 19, 2026 &#xB7; 5 min read</span>
         <button class="copy-btn" id="copy-link-btn" type="button" aria-label="Copy link to this post">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="13" height="13" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
           Copy link
@@ -335,59 +347,49 @@
       <aside class="post-sidebar">
         <p class="sidebar-label">On this page</p>
         <nav class="sidebar-links" aria-label="Article sections">
-          <a href="#the-jobs-nobody-talks-about">The Jobs Nobody Talks About</a>
-          <a href="#the-data-center-guy">The Data Center Guy</a>
-          <a href="#how-i-ended-up-at-a-military-simulation-company">How I Ended Up at a Military Simulation Company</a>
-          <a href="#the-bathroom-break">The Bathroom Break</a>
-          <a href="#what-happened-next">What Happened Next</a>
+          <a href="#the-setup">The Setup</a>
+          <a href="#why-this-is-a-smarter-approach-than-a-generic-ats-score">Why This Is a Smarter Approach Than a Generic ATS Score</a>
+          <a href="#the-output-is-built-to-be-used-not-just-read">The Output Is Built to Be Used, Not Just Read</a>
+          <a href="#why-this-matters-more-than-people-think">Why This Matters More Than People Think</a>
         </nav>
       </aside>
 
       <!-- Article -->
       <article class="post-article">
 
-        <p>I've had a lot of jobs that had nothing to do with tech.</p>
-        <p>And I mean a LOT.</p>
-        <p>We're talking security guard. Temp agency contracts doing whatever they needed done. Jobs where they'd let you go after two weeks with no real explanation and you'd just have to move on to the next thing.</p>
-        <p>It was hard. I won't pretend it wasn't. But it got me here.</p>
+        <p>It&#8217;s 2026 and people are still mass-applying with the same resume to every job and wondering why nobody calls back.</p>
+        <p>I get it. Job hunting is a numbers game, so the instinct is to apply to everything and see what sticks. But that instinct is wrong, and the data backs it up. Most applicant tracking systems and recruiters are filtering on keyword and skill overlap between your resume and the job description. If your resume doesn&#8217;t speak the language of the posting, it doesn&#8217;t matter how qualified you actually are. You&#8217;re invisible before a human ever sees it.</p>
+        <p>That&#8217;s the exact problem Leveo&#8217;s Resume Fit Score is built to solve, and after using it for a video I produced as part of an ongoing content partnership with them, I wanted to break down how it actually works under the hood, because the mechanics are smarter than they look at first glance.</p>
 
-        <h2 id="the-jobs-nobody-talks-about">The Jobs Nobody Talks About</h2>
-        <p>Nobody talks about the in-between years. The ones between "I want to be in tech" and "I actually work in tech."</p>
-        <p>I was out here bouncing between temp agencies, taking whatever came up. One of those gigs put me in a data center securing server racks. Y'all, the room was freezing. I'm talking cold cold. I was working nights, doing patrol, making sure nobody was getting into those racks. I didn't even fully understand at the time that what I was protecting was people's actual data. I just knew it was important enough that if they caught you sleeping on the job you were fired on the spot.</p>
-        <p>But something happened at that data center that I never forgot.</p>
+        <h2 id="the-setup">The Setup</h2>
+        <p>Leveo is a Chrome extension that sits in a side panel while you browse LinkedIn, Indeed, Greenhouse, or Lever. You upload your resume once. From there, every job posting you save gets pulled into a pipeline, tracked through stages from Saved to Applied to Interviewing to Offer.</p>
+        <p>The Fit Score feature kicks in the moment you save a job. Leveo takes two inputs, your resume and the full text of that specific job description, and sends both to an AI model. What comes back isn&#8217;t just a number. It&#8217;s three things:</p>
+        <ul>
+          <li>A 0&#8211;100 fit score</li>
+          <li>A breakdown of your strengths and gaps relative to that posting</li>
+          <li>A personalized cover letter and a rewritten version of your resume tailored to that role</li>
+        </ul>
 
-        <h2 id="the-data-center-guy">The Data Center Guy</h2>
-        <p>There was this guy who'd come in late at night with his laptop, do whatever he needed to do with the servers, and leave. One night I finally asked him what he did.</p>
-        <p>He told me I was young, I worked in a data center, and if I picked up anything in IT I'd be set for life. He even said look around, you're already here, use that to your advantage.</p>
-        <p>That was it. That was the whole conversation. But it hit different.</p>
-        <p>I started looking into tech from that night on. I didn't know where I fit yet. Cybersecurity, networking, something. But I knew I wanted in. That seed was planted and it wasn't going anywhere.</p>
+        <h2 id="why-this-is-a-smarter-approach-than-a-generic-ats-score">Why This Is a Smarter Approach Than a Generic ATS Score</h2>
+        <p>A lot of resume tools score you against a static rubric or a generic keyword list. That&#8217;s a weaker signal than it sounds like, because every job description, even for the same title, weights things differently. A Senior Software Engineer posting at a fintech startup and one at a design tool company are not asking for the same things, even if the title is identical.</p>
+        <p>Leveo&#8217;s approach scores you against the actual job description in front of you, not a generic template. That&#8217;s a meaningfully different problem to solve. It means the gaps it surfaces are specific. Instead of &#8220;your resume needs more keywords,&#8221; you get something closer to &#8220;this role wants API gateway experience and your resume doesn&#8217;t mention it.&#8221; That&#8217;s a gap you can actually act on.</p>
+        <p>The strengths and gaps breakdown matters more than the number itself, honestly. A 74 doesn&#8217;t tell you what to do next. Knowing you&#8217;re missing one specific qualifying detail does.</p>
 
-        <h2 id="how-i-ended-up-at-a-military-simulation-company">How I Ended Up at a Military Simulation Company</h2>
-        <p>Fast forward through more work. Help desk. The patent office doing overnight shifts migrating Windows machines. Eventually I landed at Conflict Kinetics.</p>
-        <p>If you don't know them, they build synthetic marksmanship training systems for the military. Think virtual weapons simulation. If you shoot something in the head, it should register and go down. My job was making sure it did. I was literally testing virtual guns.</p>
-        <p>Here's the wild part. I was doing quality assurance without even knowing that's what it was called. I didn't know the title. I didn't know the process had a name. I was just doing it.</p>
-        <p>I was still dead set on cybersecurity at that point too. I'd gotten my CompTIA A+ through SLAM Technology, was working toward my Network+, had my eyes on the SOC. That was the plan. Stick to the plan.</p>
-        <p>Then one day I walked past a coworker's desk on the way to the bathroom.</p>
+        <h2 id="the-output-is-built-to-be-used-not-just-read">The Output Is Built to Be Used, Not Just Read</h2>
+        <p>Where this gets genuinely useful is what happens after the score. Most fit-check tools stop at the diagnosis. Leveo turns the diagnosis into two deliverables you can immediately use: a cover letter written with your real experience and name, and a resume rewritten for that specific posting.</p>
+        <p>That&#8217;s the part worth paying attention to as a design decision. The score alone is just information. Pairing it with generated output that addresses the gaps is what turns this from &#8220;here&#8217;s your problem&#8221; into &#8220;here&#8217;s your problem solved.&#8221; It removes the part of the process that actually keeps people stuck, which is sitting down and rewriting a resume for every single application.</p>
 
-        <h2 id="the-bathroom-break">The Bathroom Break</h2>
-        <p>His screen stopped me cold.</p>
-        <p>VS Code. All those colors. The syntax highlighting. The structure of it. I know people say love at first sight only happens in the movies. I used to think that too. But standing there looking at that screen, that was it for me. That was genuinely the moment.</p>
-        <p>He was doing Unreal Engine development and I had zero idea what any of it meant. But I needed to know. Immediately.</p>
-        <p>I went back and asked him everything. What are you building? How does your work connect to what I do? How do I even start learning this? He was patient with me. I was not patient at all. I bombarded that man with questions for the next month straight. He still has me on LinkedIn to this day which honestly says a lot about his character.</p>
-        <p>That moment didn't just change what I wanted to do. It changed how I thought about learning. I stopped following someone else's plan and started chasing the thing that actually made me curious.</p>
-
-        <h2 id="what-happened-next">What Happened Next</h2>
-        <p>I signed up for a coding bootcamp. I started building things. I struggled, a lot, but I kept going.</p>
-        <p>That curiosity I felt standing at that desk? It never went away. It just kept finding new directions. Front end development. QA. Content creation. Building for brands. Hosting a podcast. And now developer relations.</p>
-        <p>Every step made sense looking back. Even the freezing cold data center. Even the contracts that ended with no warning. Even the bathroom break.</p>
-        <p>If you're in the in-between years right now, just keep going. The moment that changes everything usually doesn't announce itself.</p>
+        <h2 id="why-this-matters-more-than-people-think">Why This Matters More Than People Think</h2>
+        <p>The real shift here isn&#8217;t the AI part, honestly. It&#8217;s that this feature forces a moment of friction back into a process that&#8217;s gotten too frictionless. Easy Apply made applying so effortless that a lot of people stopped checking whether they were even a fit before hitting submit. Leveo&#8217;s Fit Score reintroduces that check, but does it in seconds instead of the twenty minutes it&#8217;d take to manually compare a resume against a posting.</p>
+        <p>If you&#8217;re applying to dozens of jobs and hearing nothing back, the fix usually isn&#8217;t applying to more jobs. It&#8217;s making sure the ones you do apply to actually match what you&#8217;re putting in front of them. That&#8217;s a fixable problem, and it&#8217;s the one this feature is built around.</p>
+        <p>If you want to see it in action, I walked through it on video as part of my partnership with Leveo. You can find it on my Instagram and YouTube, @annorcode.</p>
 
         <!-- Author bio -->
         <div class="author-bio">
           <img class="author-avatar" src="../../assets/img/avatar.jpg" alt="Nyamekye Annor">
           <div class="author-info">
             <p class="author-name">Nyamekye Annor</p>
-            <p class="author-text">Developer Advocate, Content Creator, and Storyteller based in Washington DC. I build real things with developer tools — then turn what I learn into content people actually want to watch.</p>
+            <p class="author-text">Developer Advocate, Content Creator, and Storyteller based in Washington DC. I build real things with developer tools &#8212; then turn what I learn into content people actually want to watch.</p>
             <div class="author-social">
               <a href="https://youtube.com/@annorcode" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
                 <svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20" aria-hidden="true"><path d="M21.8 8s-.2-1.4-.8-2c-.8-.8-1.6-.8-2-.9C16.3 5 12 5 12 5s-4.3 0-7 .1c-.4.1-1.2.1-2 .9-.6.6-.8 2-.8 2S2 9.6 2 11.2v1.5c0 1.6.2 3.2.2 3.2s.2 1.4.8 2c.8.8 1.8.8 2.2.8C6.5 19 12 19 12 19s4.3 0 7-.2c.4-.1 1.2-.1 2-.9.6-.6.8-2 .8-2s.2-1.6.2-3.2v-1.5C22 9.6 21.8 8 21.8 8zm-11.8 6.5V9.5l5.4 2.5-5.4 2.5z"/></svg>
@@ -408,8 +410,8 @@
         <!-- Read Next -->
         <div class="read-next">
           <p class="read-next-label">Read Next</p>
-          <a class="read-next-card" href="../../blog/why-leveos-resume-fit-score-actually-works/">
-            <h3>Why Leveo&#8217;s Resume Fit Score Actually Works &rarr;</h3>
+          <a class="read-next-card" href="../../blog/bootcamp-burnout-and-the-dog-it-brought-out-of-me/">
+            <h3>Bootcamp, Burnout, and the Dog It Brought Out of Me &rarr;</h3>
           </a>
         </div>
 
@@ -425,7 +427,7 @@
 
   <footer class="site-footer">
     <div class="footer-inner">
-      <p data-bind="site.footerNote">© 2026 Nyamekye Annor · Developer Advocate · matcha > coffee</p>
+      <p data-bind="site.footerNote">&#169; 2026 Nyamekye Annor &#xB7; Developer Advocate &#xB7; matcha &gt; coffee</p>
     </div>
   </footer>
 
