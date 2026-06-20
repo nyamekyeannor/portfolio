@@ -119,6 +119,16 @@
         grid-template-columns: 1fr;
       }
     }
+
+    @keyframes card-highlight {
+      0%   { border-color: var(--accent-blue); box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25); }
+      60%  { border-color: var(--accent-blue); box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.25); }
+      100% { border-color: var(--border);      box-shadow: none; }
+    }
+
+    .series-card:target {
+      animation: card-highlight 2.4s ease-out forwards;
+    }
   </style>
 </head>
 <body>
@@ -174,7 +184,7 @@
           </div>
         </a>
 
-        <a class="series-card" href="https://youtube.com/shorts/rPcVo7G2Q0o" target="_blank" rel="noopener noreferrer">
+        <a class="series-card" id="video-02" href="https://youtube.com/shorts/rPcVo7G2Q0o" target="_blank" rel="noopener noreferrer">
           <div class="series-thumb-wrap">
             <img class="series-thumb" src="../../assets/img/leveo-thumb-2.jpg" alt="Stop Clicking Easy Apply — Use Leveo's Resume Fit Score Instead">
             <div class="play-overlay" aria-hidden="true">
