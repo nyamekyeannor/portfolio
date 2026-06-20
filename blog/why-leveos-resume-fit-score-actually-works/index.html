@@ -354,6 +354,7 @@
         <p class="sidebar-label">On this page</p>
         <nav class="sidebar-links" aria-label="Article sections">
           <a href="#the-setup">The Setup</a>
+          <a href="#it-works-anywhere-not-just-the-big-job-boards">It Works Anywhere, Not Just the Big Job Boards</a>
           <a href="#why-this-is-a-smarter-approach-than-a-generic-ats-score">Why This Is a Smarter Approach Than a Generic ATS Score</a>
           <a href="#the-output-is-built-to-be-used-not-just-read">The Output Is Built to Be Used, Not Just Read</a>
           <a href="#why-this-matters-more-than-people-think">Why This Matters More Than People Think</a>
@@ -375,6 +376,12 @@
           <li>A breakdown of your strengths and gaps relative to that posting</li>
           <li>A personalized cover letter and a rewritten version of your resume tailored to that role</li>
         </ul>
+
+        <h2 id="it-works-anywhere-not-just-the-big-job-boards">It Works Anywhere, Not Just the Big Job Boards</h2>
+        <p>People assume tools like this only work on LinkedIn or Indeed because those are the platforms everyone talks about. Leveo isn&#8217;t actually limited to a handful of supported sites, and that detail says something about how it&#8217;s likely built.</p>
+        <p>A browser extension that only worked on specific job boards would need hardcoded scraper logic for every single site it supports, a brittle approach that breaks the moment any of those sites changes their DOM structure. Leveo working across arbitrary job boards instead suggests a more general detection layer, likely a content script that runs on page load and pattern matches for job posting signals like title tags, structured data, or common posting layouts, rather than site-specific selectors. That&#8217;s a meaningfully harder problem to solve well, but it&#8217;s also the only approach that scales past two or three major platforms.</p>
+        <p>The side panel itself is persistent across navigation. Open it once and it stays docked next to whatever job board you&#8217;re browsing until you manually toggle the session off. That&#8217;s a different interaction model than a typical popup extension, which closes the moment you click away and forces you to reopen it for every action. A persistent side panel implies the extension is using Chrome&#8217;s side panel API rather than a standard popup, which keeps state alive as you move between tabs and pages instead of resetting on every interaction.</p>
+        <p>Detection is automatic too. Land on a job posting and the content script picks it up, pulling the job title straight into the panel without you doing anything. You can manually drop in a job if it doesn&#8217;t auto-detect, but in practice that&#8217;s rarely needed. The friction it removes is small on paper, not having to copy and paste a job description into a separate tool, but that small bit of friction is usually the difference between a tool people use consistently and one they abandon after day two.</p>
 
         <h2 id="why-this-is-a-smarter-approach-than-a-generic-ats-score">Why This Is a Smarter Approach Than a Generic ATS Score</h2>
         <p>A lot of resume tools score you against a static rubric or a generic keyword list. That&#8217;s a weaker signal than it sounds like, because every job description, even for the same title, weights things differently. A Senior Software Engineer posting at a fintech startup and one at a design tool company are not asking for the same things, even if the title is identical.</p>
