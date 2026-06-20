@@ -280,6 +280,19 @@
       border-color: var(--accent-blue);
     }
 
+    /* ── Diagrams ── */
+    .post-diagram {
+      margin: 28px 0 36px;
+      overflow: hidden;
+    }
+
+    .post-diagram figcaption {
+      margin-top: 10px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      text-align: center;
+    }
+
     /* ── Mobile ── */
     @media (max-width: 820px) {
       .post-layout {
@@ -377,11 +390,70 @@
           <li>A personalized cover letter and a rewritten version of your resume tailored to that role</li>
         </ul>
 
+        <figure class="post-diagram" aria-label="Job tracking pipeline">
+          <svg viewBox="0 0 476 60" xmlns="http://www.w3.org/2000/svg" width="100%" role="img" aria-label="Four-stage pipeline: Saved, Applied, Interviewing, Offer">
+            <defs>
+              <marker id="pipe-arr" markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto">
+                <path d="M0,0 L7,3.5 L0,7 Z" fill="var(--accent-blue)"/>
+              </marker>
+            </defs>
+            <rect x="0"   y="8" width="96"  height="44" rx="8" fill="var(--surface)" stroke="var(--border)"      stroke-width="1.5"/>
+            <text x="48"  y="30" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="600" fill="var(--text)"        font-family="inherit">Saved</text>
+            <line x1="97"  y1="30" x2="119" y2="30" stroke="var(--accent-blue)" stroke-width="1.5" marker-end="url(#pipe-arr)"/>
+            <rect x="120" y="8" width="96"  height="44" rx="8" fill="var(--surface)" stroke="var(--border)"      stroke-width="1.5"/>
+            <text x="168" y="30" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="600" fill="var(--text)"        font-family="inherit">Applied</text>
+            <line x1="217" y1="30" x2="239" y2="30" stroke="var(--accent-blue)" stroke-width="1.5" marker-end="url(#pipe-arr)"/>
+            <rect x="240" y="8" width="116" height="44" rx="8" fill="var(--surface)" stroke="var(--border)"      stroke-width="1.5"/>
+            <text x="298" y="30" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="600" fill="var(--text)"        font-family="inherit">Interviewing</text>
+            <line x1="357" y1="30" x2="379" y2="30" stroke="var(--accent-blue)" stroke-width="1.5" marker-end="url(#pipe-arr)"/>
+            <rect x="380" y="8" width="96"  height="44" rx="8" fill="var(--surface)" stroke="var(--accent-blue)" stroke-width="1.5"/>
+            <text x="428" y="30" text-anchor="middle" dominant-baseline="central" font-size="13" font-weight="600" fill="var(--accent-blue)" font-family="inherit">Offer</text>
+          </svg>
+          <figcaption>Every saved job moves through this pipeline.</figcaption>
+        </figure>
+
         <h2 id="it-works-anywhere-not-just-the-big-job-boards">It Works Anywhere, Not Just the Big Job Boards</h2>
         <p>People assume tools like this only work on LinkedIn or Indeed because those are the platforms everyone talks about. Leveo isn&#8217;t actually limited to a handful of supported sites, and that detail says something about how it&#8217;s likely built.</p>
         <p>A browser extension that only worked on specific job boards would need hardcoded scraper logic for every single site it supports, a brittle approach that breaks the moment any of those sites changes their DOM structure. Leveo working across arbitrary job boards instead suggests a more general detection layer, likely a content script that runs on page load and pattern matches for job posting signals like title tags, structured data, or common posting layouts, rather than site-specific selectors. That&#8217;s a meaningfully harder problem to solve well, but it&#8217;s also the only approach that scales past two or three major platforms.</p>
         <p>The side panel itself is persistent across navigation. Open it once and it stays docked next to whatever job board you&#8217;re browsing until you manually toggle the session off. That&#8217;s a different interaction model than a typical popup extension, which closes the moment you click away and forces you to reopen it for every action. A persistent side panel implies the extension is using Chrome&#8217;s side panel API rather than a standard popup, which keeps state alive as you move between tabs and pages instead of resetting on every interaction.</p>
         <p>Detection is automatic too. Land on a job posting and the content script picks it up, pulling the job title straight into the panel without you doing anything. You can manually drop in a job if it doesn&#8217;t auto-detect, but in practice that&#8217;s rarely needed. The friction it removes is small on paper, not having to copy and paste a job description into a separate tool, but that small bit of friction is usually the difference between a tool people use consistently and one they abandon after day two.</p>
+
+        <figure class="post-diagram" aria-label="Side panel versus popup extension comparison">
+          <svg viewBox="0 0 476 126" xmlns="http://www.w3.org/2000/svg" width="100%" role="img" aria-label="Comparison: Typical Popup closes on click away; Leveo Side Panel stays docked and persists">
+            <!-- Typical Popup -->
+            <rect x="0" y="0" width="218" height="126" rx="8" fill="var(--surface)" stroke="var(--border)" stroke-width="1.5" stroke-dasharray="5 3"/>
+            <text x="109" y="20" text-anchor="middle" dominant-baseline="central" font-size="10" font-weight="700" fill="var(--muted)" font-family="inherit" letter-spacing="0.06em">TYPICAL POPUP</text>
+            <line x1="14" y1="32" x2="204" y2="32" stroke="var(--border)" stroke-width="1"/>
+            <circle cx="27" cy="52" r="8" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+            <line x1="23" y1="48" x2="31" y2="56" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="31" y1="48" x2="23" y2="56" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+            <text x="42" y="52" dominant-baseline="central" font-size="12" fill="var(--muted)" font-family="inherit">Closes on click away</text>
+            <circle cx="27" cy="77" r="8" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+            <line x1="23" y1="73" x2="31" y2="81" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="31" y1="73" x2="23" y2="81" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+            <text x="42" y="77" dominant-baseline="central" font-size="12" fill="var(--muted)" font-family="inherit">Resets on navigation</text>
+            <circle cx="27" cy="102" r="8" fill="none" stroke="var(--border)" stroke-width="1.5"/>
+            <line x1="23" y1="98" x2="31" y2="106" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="31" y1="98" x2="23" y2="106" stroke="var(--muted)" stroke-width="1.5" stroke-linecap="round"/>
+            <text x="42" y="102" dominant-baseline="central" font-size="12" fill="var(--muted)" font-family="inherit">Manual reopen needed</text>
+            <!-- vs -->
+            <text x="238" y="63" text-anchor="middle" dominant-baseline="central" font-size="12" font-weight="700" fill="var(--muted)" font-family="inherit">vs</text>
+            <!-- Leveo Side Panel -->
+            <rect x="258" y="0" width="218" height="126" rx="8" fill="var(--surface)" stroke="var(--accent-blue)" stroke-width="1.5"/>
+            <text x="367" y="20" text-anchor="middle" dominant-baseline="central" font-size="10" font-weight="700" fill="var(--accent-blue)" font-family="inherit" letter-spacing="0.06em">LEVEO SIDE PANEL</text>
+            <line x1="272" y1="32" x2="462" y2="32" stroke="var(--border)" stroke-width="1"/>
+            <circle cx="285" cy="52" r="8" fill="var(--accent-blue)" fill-opacity="0.12" stroke="var(--accent-blue)" stroke-width="1.5"/>
+            <polyline points="280,52 283,56 291,46" fill="none" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="300" y="52" dominant-baseline="central" font-size="12" fill="var(--text)" font-family="inherit">Opens once, stays docked</text>
+            <circle cx="285" cy="77" r="8" fill="var(--accent-blue)" fill-opacity="0.12" stroke="var(--accent-blue)" stroke-width="1.5"/>
+            <polyline points="280,77 283,81 291,71" fill="none" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="300" y="77" dominant-baseline="central" font-size="12" fill="var(--text)" font-family="inherit">Persists across pages</text>
+            <circle cx="285" cy="102" r="8" fill="var(--accent-blue)" fill-opacity="0.12" stroke="var(--accent-blue)" stroke-width="1.5"/>
+            <polyline points="280,102 283,106 291,96" fill="none" stroke="var(--accent-blue)" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <text x="300" y="102" dominant-baseline="central" font-size="12" fill="var(--text)" font-family="inherit">State stays alive</text>
+          </svg>
+          <figcaption>A persistent side panel versus a typical popup extension.</figcaption>
+        </figure>
 
         <h2 id="why-this-is-a-smarter-approach-than-a-generic-ats-score">Why This Is a Smarter Approach Than a Generic ATS Score</h2>
         <p>A lot of resume tools score you against a static rubric or a generic keyword list. That&#8217;s a weaker signal than it sounds like, because every job description, even for the same title, weights things differently. A Senior Software Engineer posting at a fintech startup and one at a design tool company are not asking for the same things, even if the title is identical.</p>
@@ -393,7 +465,7 @@
         <p>That&#8217;s the part worth paying attention to as a design decision. The score alone is just information. Pairing it with generated output that addresses the gaps is what turns this from &#8220;here&#8217;s your problem&#8221; into &#8220;here&#8217;s your problem solved.&#8221; It removes the part of the process that actually keeps people stuck, which is sitting down and rewriting a resume for every single application.</p>
 
         <h2 id="why-this-matters-more-than-people-think">Why This Matters More Than People Think</h2>
-        <p>The real shift here isn&#8217;t the AI part, honestly. It&#8217;s that this feature forces a moment of friction back into a process that&#8217;s gotten too frictionless. Easy Apply made applying so effortless that a lot of people stopped checking whether they were even a fit before hitting submit. Leveo&#8217;s Fit Score reintroduces that check, but does it in seconds instead of the twenty minutes it&#8217;d take to manually compare a resume against a posting.</p>
+        <p>The real shift here isn&#8217;t the AI part, honestly. It&#8217;s that this feature forces a moment of friction back into a process that&#8217;s gotten too frictionless. Easy Apply made applying so effortless that a lot of people stopped checking whether they were even a fit before hitting submit. Leveo&#8217;s Fit Score reintroduces that check, but does it in seconds instead of the time it&#8217;d take to manually compare a resume against a posting.</p>
         <p>If you&#8217;re applying to dozens of jobs and hearing nothing back, the fix usually isn&#8217;t applying to more jobs. It&#8217;s making sure the ones you do apply to actually match what you&#8217;re putting in front of them. That&#8217;s a fixable problem, and it&#8217;s the one this feature is built around.</p>
         <p>If you want to see it in action, you can find it <a href="../../projects/leveo/#video-02">here</a>.</p>
 
