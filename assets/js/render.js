@@ -66,6 +66,7 @@
     const tagName = item.href ? "a" : "article";
     const card = document.createElement(tagName);
     if (item.href) card.href = link(item.href);
+    if (item.newTab) { card.setAttribute("target", "_blank"); card.setAttribute("rel", "noopener noreferrer"); }
 
     const eyebrow = item.eyebrow || item.status || item.event || meta;
     const date = item.date ? `<span class="item-date">${escapeHtml(item.date)}</span>` : "";

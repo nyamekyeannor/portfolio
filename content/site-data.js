@@ -75,7 +75,8 @@ window.PORTFOLIO_DATA = {
       title: "Decoded Stories",
       event: "Podcast · Host & Creator",
       description: "Stories people don't usually tell. Real conversations that go past the highlight reel.",
-      href: "talks/decoded-stories/",
+      href: "https://decoded-stories.netlify.app",
+      newTab: true,
       thumbnail: "assets/img/decoded-stories-cover.jpg",
       tags: []
     },
